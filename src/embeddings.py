@@ -37,6 +37,25 @@ def get_candidate_text(candidate: Dict[str, Any]) -> str:
     skills = candidate.get("skills", [])
     skills_text = ", ".join(s.get("name", "") for s in skills if s.get("name"))
     
+    # Education list
+    education = candidate.get("education", [])
+    edu_list = []
+    for edu in education:
+        deg = edu.get("degree", "")
+        major = edu.get("field_of_study", "")
+        inst = edu.get("institution", "")
+        if deg or major:
+            edu_list.append(f"{deg} in {major} from {inst}")
+    edu_text = " | ".join(edu_list)
+    
+    # Certifications
+    certs = candidate.get("certifications", []) or []
+    certs_text = ", ".join(c.get("name", "") for c in certs if c.get("name"))
+    
+    # Languages
+    langs = candidate.get("languages", []) or []
+    langs_text = ", ".join(l.get("language", "") for l in langs if l.get("language"))
+    
     parts = []
     if headline:
         parts.append(f"Headline: {headline}")
@@ -46,6 +65,12 @@ def get_candidate_text(candidate: Dict[str, Any]) -> str:
         parts.append(f"Experience: {history_text}")
     if skills_text:
         parts.append(f"Skills: {skills_text}")
+    if edu_text:
+        parts.append(f"Education: {edu_text}")
+    if certs_text:
+        parts.append(f"Certifications: {certs_text}")
+    if langs_text:
+        parts.append(f"Languages: {langs_text}")
         
     return "\n".join(parts)
 
