@@ -25,6 +25,7 @@ def main():
     parser = argparse.ArgumentParser(description="Phase 2: Timed candidate ranking.")
     parser.add_argument("--candidates", type=str, required=True, help="Path to candidates pool file (.jsonl or .jsonl.gz)")
     parser.add_argument("--out", type=str, required=True, help="Path to write the final ranked CSV")
+    parser.add_argument("--verbose", action="store_true", help="Print detailed validation and cohort statistics of the final top-100 list")
     args = parser.parse_args()
     
     # 1. Load Pre-Computed Artifacts
@@ -156,6 +157,28 @@ def main():
         sys.exit(1)
     else:
         logger.info("Validator verification successful! CSV is 100% compliant.")
+        if args.verbose:
+            print("\n" + "="*80)
+            print("VERBOSE SCORES AND COHORT REPORT")
+            print("="*80)
+            avg_score = sum(c["score"] for c in final_100) / len(final_100)
+            avg_yoe = sum(c.get("profile", {}).get("years_of_experience", 0) for c in final_100) / len(final_100)
+            locations = [c.get("profile", {}).get("location", "Unknown").strip() for c in final_100]
+            from collections import Counter
+            loc_counts = Counter(locations)
+            
+            print(f"Cohort Size:           {len(final_100)} candidates")
+            print(f"Average Fusion Score:  {avg_score:.4f}")
+            print(f"Average Experience:    {avg_yoe:.2f} years")
+            print("\nTop Location Distribution:")
+            for loc, count in loc_counts.most_common(4):
+                print(f"  - {loc}: {count} candidates")
+                
+            print("\nTop 5 Candidates Preview:")
+            for c in final_100[:5]:
+                p = c.get("profile", {})
+                print(f"  Rank {c['rank']}: ID={c['candidate_id']} | Score={c['score']:.4f} | {p.get('current_title', 'Engineer')} at {p.get('current_company', 'N/A')} ({p.get('years_of_experience', 0)} YOE)")
+            print("="*80 + "\n")
 
 if __name__ == '__main__':
     main()
