@@ -49,6 +49,25 @@ def parse_job_description(jd_path: Path) -> JobDescriptionRequirements:
             reqs.experience_max = int(exp_match.group(2))
             logger.info(f"Parsed experience range: {reqs.experience_min} to {reqs.experience_max} years")
             
+        # Dynamically extract locations
+        loc_match = re.search(r"Location:\s*([^\n|]+)", content, re.IGNORECASE)
+        if loc_match:
+            loc_str = loc_match.group(1).lower()
+            # Split by comma, slash, and strip whitespace
+            parsed_locs = [l.strip() for l in re.split(r"[,/]", loc_str) if l.strip()]
+            if parsed_locs:
+                # Add to existing defaults or replace if we find new ones
+                # Normalize delhi ncr
+                norm_locs = []
+                for l in parsed_locs:
+                    if "delhi" in l or "ncr" in l:
+                        norm_locs.extend(["delhi", "ncr"])
+                    else:
+                        norm_locs.append(l)
+                # Keep unique
+                reqs.preferred_locations = list(set(reqs.preferred_locations + norm_locs))
+                logger.info(f"Updated preferred locations from JD: {reqs.preferred_locations}")
+                
     except Exception as e:
         logger.error(f"Error parsing JD file: {e}. Falling back to default spec.")
         
