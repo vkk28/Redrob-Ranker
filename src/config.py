@@ -14,6 +14,8 @@ SAMPLE_CANDIDATES_JSON = BASE_DIR / "sample_candidates.json"
 JOB_DESCRIPTION_MD = BASE_DIR / "job_description.md"
 REDROB_SIGNALS_MD = BASE_DIR / "redrob_signals_doc.md"
 
+import json
+
 # Calibration weights JSON path
 CALIBRATION_WEIGHTS_PATH = ARTIFACTS_DIR / "calibration_weights.json"
 
@@ -21,6 +23,16 @@ CALIBRATION_WEIGHTS_PATH = ARTIFACTS_DIR / "calibration_weights.json"
 CORE_FIT_WEIGHT = 0.55
 LOGISTICS_WEIGHT = 0.25
 EDUCATION_WEIGHT = 0.20
+
+if CALIBRATION_WEIGHTS_PATH.exists():
+    try:
+        with open(CALIBRATION_WEIGHTS_PATH, "r", encoding="utf-8") as _f:
+            _weights = json.load(_f)
+            CORE_FIT_WEIGHT = _weights.get("core_fit_weight", CORE_FIT_WEIGHT)
+            LOGISTICS_WEIGHT = _weights.get("logistics_weight", LOGISTICS_WEIGHT)
+            EDUCATION_WEIGHT = _weights.get("education_weight", EDUCATION_WEIGHT)
+    except Exception:
+        pass
 
 # Gating Thresholds
 MIN_YOE_FLOOR = 3.0  # JD says 5-9 but considers slightly below. Let's gate below 3.0
