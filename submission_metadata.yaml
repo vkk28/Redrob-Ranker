@@ -11,7 +11,7 @@ team_members:
     email: "varun@example.com"
     role: "ML Engineer"
 
-github_repo: "https://github.com/varunkashyap/Redrob-Ranker"
+github_repo: "https://github.com/vkk28/Redrob-Ranker"
 sandbox_link: ""  # TODO: Deploy to HuggingFace Spaces, Streamlit Cloud, or provide Docker recipe
 
 reproduce_command: "OMP_NUM_THREADS=1 PYTHONPATH=. python scripts/rank.py --candidates ./candidates.jsonl --out ./submission.csv"
