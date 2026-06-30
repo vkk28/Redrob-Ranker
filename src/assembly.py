@@ -54,10 +54,18 @@ def assemble_final_csv(
     # Re-sort to maintain score ordering
     final_100.sort(key=lambda c: c["final_ranked_score"], reverse=True)
     
-    # Assign ranks and finalize scores
+    # Assign rounded scores first
+    for c in final_100:
+        c["score"] = round(c["final_ranked_score"], 4)
+        
+    # Re-sort to guarantee:
+    # 1. score is non-increasing
+    # 2. ties are broken by candidate_id ascending (alphabetically)
+    final_100.sort(key=lambda c: (-c["score"], c["candidate_id"]))
+    
+    # Assign ranks and finalize reasonings
     for i, c in enumerate(final_100, 1):
         c["rank"] = i
-        c["score"] = round(c["final_ranked_score"], 4)
         c["reasoning"] = assemble_reasoning(c, i, c.get("fit_narrative", ""))
         
     return final_100
