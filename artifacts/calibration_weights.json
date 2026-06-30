@@ -1,0 +1,6 @@
+{
+  "core_fit_weight": 0.55,
+  "logistics_weight": 0.25,
+  "education_weight": 0.2,
+  "description": "Calibrated weights for Redrob founding engineer ranking"
+}

@@ -1,0 +1,45 @@
+# Redrob Hackathon — Submission Metadata
+team_name: "Redrob-Rankers"
+
+primary_contact:
+  name: "Varun Kashyap"
+  email: "varun@example.com"
+  phone: "+91-9999999999"
+
+team_members:
+  - name: "Varun Kashyap"
+    email: "varun@example.com"
+    role: "ML Engineer"
+
+github_repo: "https://github.com/varunkashyap/Redrob-Ranker"
+sandbox_link: ""  # TODO: Deploy to HuggingFace Spaces, Streamlit Cloud, or provide Docker recipe
+
+reproduce_command: "OMP_NUM_THREADS=1 PYTHONPATH=. python scripts/rank.py --candidates ./candidates.jsonl --out ./submission.csv"
+
+compute:
+  platform: "MacBook Pro M2"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.13.13"
+  os: "macOS 14"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: true
+  pre_computation_time_minutes: 5
+
+ai_tools_used:
+  - "Gemini"
+  - "Claude"
+
+ai_usage_summary: |
+  Used Gemini 3.5 Flash for code generation and review. No candidate data was sent to any LLM APIs during Phase 2 ranking.
+
+methodology_summary: |
+  2-Phase Retrieve-and-Rerank architecture. Retrieves top 4,000 candidates using dense BGE embeddings (HNSW index). Applies hard gates to filter honeypots, WITCH consulting, and title mismatch. Combines Core Fit (production system experience), Logistics, Education, and behavioral multipliers. Reranks top 200 via cached local Cross-Encoder. Deduplicates and force-includes Tier-5 candidates in final 100 with monotonic score reconciliation. Complete CPU run takes under 30s.
+
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true

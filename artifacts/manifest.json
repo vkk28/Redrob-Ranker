@@ -1,0 +1,6 @@
+{
+  "num_candidates": 100000,
+  "embedding_dimension": 1024,
+  "real_embeddings_count": 10,
+  "reduced_pool_size": 7
+}
