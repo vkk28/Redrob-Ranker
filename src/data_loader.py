@@ -30,10 +30,64 @@ def stream_candidates(
 
     logger.info(f"Loading candidates from {path} (validation={validate})...")
     
+    # Check if the file is a standard JSON file (not JSONL)
+    if path.suffix == ".json":
+        logger.info(f"Loading candidates as a standard JSON array from {path}...")
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                candidates_list = json.load(f)
+            for line_num, candidate_dict in enumerate(candidates_list, 1):
+                if validate:
+                    try:
+                        validated_cand = Candidate(**candidate_dict)
+                        yield validated_cand.model_dump()
+                    except Exception as ve:
+                        logger.warning(f"Validation failed on item {line_num} (candidate_id: {candidate_dict.get('candidate_id')}): {ve}")
+                        yield candidate_dict
+                else:
+                    yield candidate_dict
+            return
+        except Exception as e:
+            logger.error(f"Failed to read as standard JSON array: {e}. Falling back to streaming line-by-line.")
+
     open_func = gzip.open if path.suffix == ".gz" else open
     mode = "rt" if path.suffix == ".gz" else "r"
     
     with open_func(path, mode, encoding="utf-8") as f:
+        # Check if the first character is '[', indicating a JSON array, which we should handle
+        first_char = ""
+        try:
+            # peek first non-empty char
+            for line in f:
+                stripped = line.strip()
+                if stripped:
+                    first_char = stripped[0]
+                    break
+            # reset file pointer
+            f.seek(0)
+        except Exception:
+            pass
+
+        if first_char == "[":
+            logger.warning(f"File {path} starts with '[' indicating a JSON array. Reading whole file.")
+            try:
+                content = f.read()
+                candidates_list = json.loads(content)
+                for line_num, candidate_dict in enumerate(candidates_list, 1):
+                    if validate:
+                        try:
+                            validated_cand = Candidate(**candidate_dict)
+                            yield validated_cand.model_dump()
+                        except Exception as ve:
+                            logger.warning(f"Validation failed on item {line_num}: {ve}")
+                            yield candidate_dict
+                    else:
+                        yield candidate_dict
+                return
+            except Exception as e:
+                logger.error(f"Failed to read JSON array stream: {e}")
+                f.seek(0)
+
         for line_num, line in enumerate(f, 1):
             line = line.strip()
             if not line:
