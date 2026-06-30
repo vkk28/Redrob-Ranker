@@ -138,21 +138,10 @@ def main():
 
     # 6. Tier-5 Scan
     t0 = time.time()
-    logger.info("Scanning full pool for Tier-5 candidates...")
-    full_pool_evaluated = []
-    for cand in all_candidates_list:
-        gate_mult, _ = apply_gates(cand)
-        if gate_mult == 0.0:
-            continue
-        feat = llm_features_dict.get(cand["candidate_id"])
-        if not feat:
-            feat = local_extract_features(cand)
-        scored = score_candidate(cand, feat, gate_mult)
-        full_pool_evaluated.append(scored)
-        
-    tier_5_includes = find_tier5_candidates(full_pool_evaluated, count=5)
+    logger.info("Scanning scored pool for Tier-5 candidates...")
+    tier_5_includes = find_tier5_candidates(scored_candidates, count=5)
     t_tier5 = time.time() - t0
-    logger.info(f"Tier-5 scan completed in {t_tier5:.2f} seconds. Peak RAM: {get_peak_ram_mb():.1f} MB")
+    logger.info(f"Tier-5 scan completed in {t_tier5:.4f} seconds. Peak RAM: {get_peak_ram_mb():.1f} MB")
 
     # 7. Assembly and Write CSV
     t0 = time.time()
