@@ -154,6 +154,20 @@ def test_consulting_only(base_candidate):
     mult, _ = apply_gates(base_candidate)
     assert mult == 0.0
 
+def test_consulting_only_expanded(base_candidate):
+    # Accenture -> Mindtree -> TCS should be consulting only
+    base_candidate["profile"]["current_company"] = "TCS"
+    base_candidate["career_history"][0]["company"] = "Accenture"
+    base_candidate["career_history"][1]["company"] = "Mindtree"
+    assert is_consulting_only(base_candidate) is True
+
+def test_yoe_gate_floor(base_candidate):
+    # Candidate with YOE < 3.0 should fail apply_gates
+    base_candidate["profile"]["years_of_experience"] = 2.5
+    mult, reason = apply_gates(base_candidate)
+    assert mult == 0.0
+    assert "disqualified_low_yoe" in reason
+
 def test_title_match():
     assert check_title_match("Senior AI Engineer") == 1.0
     assert check_title_match("Staff Machine Learning Engineer") == 1.0

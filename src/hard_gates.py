@@ -1,6 +1,7 @@
 from typing import Dict, Any, Tuple
 from src.honeypot_detection import is_honeypot, is_consulting_only
 from src.utils import get_logger
+import src.config as config
 
 logger = get_logger("hard_gates")
 
@@ -69,8 +70,13 @@ def apply_gates(candidate: Dict[str, Any], current_year: int = 2026) -> Tuple[fl
     if is_consulting_only(candidate):
         return 0.0, "disqualified_consulting_only"
 
-    # 3. Job Title matching
+    # 3. YOE check: strict exclusion under MIN_YOE_FLOOR (3.0 yrs)
     profile = candidate.get("profile", {})
+    yoe = profile.get("years_of_experience", 0)
+    if yoe < config.MIN_YOE_FLOOR:
+        return 0.0, f"disqualified_low_yoe_{yoe}_floor_{config.MIN_YOE_FLOOR}"
+
+    # 4. Job Title matching
     current_title = profile.get("current_title", "")
     title_multiplier = check_title_match(current_title)
 

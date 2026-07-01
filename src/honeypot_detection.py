@@ -170,7 +170,11 @@ def is_consulting_only(candidate: Dict[str, Any]) -> bool:
     history = candidate.get("career_history", [])
     profile = candidate.get("profile", {})
     
-    witch_tier = {"tcs", "infosys", "wipro", "accenture", "cognizant", "capgemini"}
+    witch_tier = {
+        "tcs", "infosys", "wipro", "accenture", "cognizant", "capgemini",
+        "mindtree", "l&t infotech", "lti", "tech mahindra", "hcl", "mphasis",
+        "deloitte", "ey", "pwc", "kpmg"
+    }
     
     companies = set()
     current_company = profile.get("current_company")
@@ -205,6 +209,24 @@ def is_consulting_only(candidate: Dict[str, Any]) -> bool:
             normalized_companies.add("cognizant")
         elif "capgemini" in c:
             normalized_companies.add("capgemini")
+        elif "mindtree" in c:
+            normalized_companies.add("mindtree")
+        elif "tech mahindra" in c:
+            normalized_companies.add("tech mahindra")
+        elif "hcl" in c:
+            normalized_companies.add("hcl")
+        elif "mphasis" in c:
+            normalized_companies.add("mphasis")
+        elif "l&t infotech" in c or "lti" in c:
+            normalized_companies.add("lti")
+        elif "deloitte" in c:
+            normalized_companies.add("deloitte")
+        elif "ey" in c or "ernst & young" in c:
+            normalized_companies.add("ey")
+        elif "pwc" in c or "pricewaterhouse" in c:
+            normalized_companies.add("pwc")
+        elif "kpmg" in c:
+            normalized_companies.add("kpmg")
         else:
             normalized_companies.add(c)
             
