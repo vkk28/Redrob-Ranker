@@ -17,6 +17,48 @@ FICTIONAL_COMPANIES = {
     "los pollos hermanos", "sterling cooper", "paper street soap",
 }
 
+def has_role_proficiency_clash(candidate: Dict[str, Any]) -> bool:
+    """
+    Checks for structural role-proficiency and title-achievement clashes (e.g. QA, Frontend, 
+    or Data Analyst profiles claiming to build heavy production/ML/search backends).
+    """
+    profile = candidate.get("profile", {})
+    history = candidate.get("career_history", [])
+    
+    current_title = profile.get("current_title", "").lower()
+    summary = profile.get("summary", "").lower()
+    
+    # Get descriptions of current/past roles
+    descriptions = [summary]
+    for r in history:
+        desc = r.get("description", "").lower()
+        if desc:
+            descriptions.append(desc)
+    full_desc_text = " ".join(descriptions)
+    
+    # 1. QA/Testing clash
+    is_qa = any(k in current_title for k in ["qa", "quality assurance", "test engineer", "testing"])
+    if is_qa:
+        qa_clash_kws = ["kubernetes", "aws account architecture", "terraform", "vector search", "fine-tuning llm", "rag", "milvus", "qdrant"]
+        if any(kw in full_desc_text for kw in qa_clash_kws):
+            return True
+            
+    # 2. Frontend clash
+    is_frontend = any(k in current_title for k in ["frontend", "front-end", "ui/ux", "ui engineer"])
+    if is_frontend:
+        fe_clash_kws = ["faiss", "milvus", "qdrant", "opensearch", "elasticsearch", "pinecone", "weaviate", "vector search", "model training", "training gans", "yolo"]
+        if any(kw in full_desc_text for kw in fe_clash_kws):
+            return True
+            
+    # 3. Data Analyst clash
+    is_analyst = any(k in current_title for k in ["data analyst", "business analyst", "bi analyst"])
+    if is_analyst:
+        analyst_clash_kws = ["kafka", "spark streaming", "gans", "vector search", "milvus", "qdrant", "pinecone", "faiss"]
+        if any(kw in full_desc_text for kw in analyst_clash_kws):
+            return True
+            
+    return False
+
 def is_honeypot(candidate: Dict[str, Any], current_year: int = 2026) -> bool:
     """
     Detect if a candidate is a honeypot (trap) based on structural inconsistencies.
@@ -158,6 +200,11 @@ def is_honeypot(candidate: Dict[str, Any], current_year: int = 2026) -> bool:
         return True
     if conn_count > 0 and endorsements > conn_count * 5.0 and endorsements > 50:
         logger.debug(f"Honeypot: High endorsements ({endorsements}) relative to connections ({conn_count})")
+        return True
+
+    # 7. Check for role proficiency and title mismatch clashes
+    if has_role_proficiency_clash(candidate):
+        logger.debug(f"Honeypot: Title-achievement role proficiency clash detected for {profile.get('current_title')}")
         return True
 
     return False
