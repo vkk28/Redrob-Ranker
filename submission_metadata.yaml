@@ -1,14 +1,14 @@
 # Redrob Hackathon — Submission Metadata
-team_name: "Redrob-Rankers"
+team_name: "Single Thread"
 
 primary_contact:
   name: "Varun Kashyap"
-  email: "varun@example.com"  # TODO: Replace with your real email before submission
-  phone: "+91-9999999999"  # TODO: Replace with your real phone before submission
+  email: "kashyap.varun2808@gmail.com"
+  phone: "+91-9508724139"
 
 team_members:
   - name: "Varun Kashyap"
-    email: "varun@example.com"  # TODO: Replace with your real email before submission
+    email: "kashyap.varun2808@gmail.com"
     role: "ML Engineer"
 
 github_repo: "https://github.com/vkk28/Redrob-Ranker"
