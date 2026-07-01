@@ -6,7 +6,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Senior Machine Learning Engineer at Genpact AI
 - **Years of Experience**: 6.1 YOE
 - **Skills**: Elasticsearch, Redux, LangChain, Machine Learning, LlamaIndex, Information Retrieval, TensorFlow, LLMs, NLP, Sentence Transformers, YOLO, Forecasting, pgvector, Image Classification, Weights & Biases, TTS, Qdrant
-- **Generated Reasoning**: *"6y Senior Machine Learning Engineer at Genpact AI. Key achievement: Led the migration from keyword-based to embedding-based search across a 30M+ candidate corpus over 8 months. Directly maps to: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval, search/ranking/retrieval systems."*
+- **Generated Reasoning**: *"6y Senior Machine Learning Engineer at Genpact AI. Key achievement: Led the migration from keyword-based to embedding-based search across a 30M+ candidate corpus over 8 months. Strongly aligns with core JD requirements: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval, search/ranking/retrieval systems."*
 
 ### Career History:
 - **Senior Machine Learning Engineer** at Genpact AI (2022-06-17 to Present)
@@ -20,7 +20,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Senior Applied Scientist at Meta
 - **Years of Experience**: 16.2 YOE
 - **Skills**: Fine-tuning LLMs, LlamaIndex, Qdrant, Reinforcement Learning, NLP, Statistical Modeling, Kubeflow, ASR, OpenSearch, Deep Learning, Machine Learning, LLMs, BM25, Weaviate, Python, TensorFlow, CI/CD, pgvector, Speech Recognition, Elasticsearch
-- **Generated Reasoning**: *"16y Senior Applied Scientist at Meta. Key achievement: Owned the end-to-end ranking pipeline at a recommendations-heavy consumer product: candidate sourcing → embedding generation (using a fine-tuned... Directly maps to: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval, search/ranking/retrieval systems."*
+- **Generated Reasoning**: *"16y Senior Applied Scientist at Meta. Key achievement: Owned the end-to-end ranking pipeline at a recommendations-heavy consumer product: candidate sourcing → embedding generation (using a fine-tuned... Demonstrates validated expertise in: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval, search/ranking/retrieval systems."*
 
 ### Career History:
 - **Senior Applied Scientist** at Meta (2023-05-13 to Present)
@@ -36,7 +36,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Senior NLP Engineer at Salesforce
 - **Years of Experience**: 8.9 YOE
 - **Skills**: Python, Image Classification, OpenCV, Pinecone, Haystack, Six Sigma, TTS, Diffusion Models, BM25, YOLO, OpenSearch, PEFT, Deep Learning, Elasticsearch, QLoRA, Semantic Search
-- **Generated Reasoning**: *"9y Senior NLP Engineer at Salesforce. Key achievement: Built the data curation pipeline that generated 200K high-quality preference pairs from recruiter labels, plus the eval harness using both ranking... Directly maps to: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval, search/ranking/retrieval systems."*
+- **Generated Reasoning**: *"9y Senior NLP Engineer at Salesforce. Key achievement: Built the data curation pipeline that generated 200K high-quality preference pairs from recruiter labels, plus the eval harness using both ranking... Brings deep experience in: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval, search/ranking/retrieval systems."*
 
 ### Career History:
 - **Senior NLP Engineer** at Salesforce (2023-06-12 to Present)
@@ -66,7 +66,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Senior Machine Learning Engineer at Zomato
 - **Years of Experience**: 7.2 YOE
 - **Skills**: Deep Learning, Weaviate, Recommendation Systems, scikit-learn, Diffusion Models, Pinecone, Information Retrieval, Milvus, QLoRA, RAG, Embeddings, Learning to Rank, CNN, Go, BM25, LangChain, Weights & Biases
-- **Generated Reasoning**: *"7y Senior Machine Learning Engineer at Zomato. Key achievement: Built a RAG-based ranking pipeline serving 50M+ queries per month for an internal recruiter-facing search product. Directly maps to: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval, search/ranking/retrieval systems."*
+- **Generated Reasoning**: *"7y Senior Machine Learning Engineer at Zomato. Key achievement: Built a RAG-based ranking pipeline serving 50M+ queries per month for an internal recruiter-facing search product. Strongly aligns with core JD requirements: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval, search/ranking/retrieval systems."*
 
 ### Career History:
 - **Senior Machine Learning Engineer** at Zomato (2024-04-07 to Present)
@@ -82,7 +82,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Staff Machine Learning Engineer at Paytm
 - **Years of Experience**: 7.0 YOE
 - **Skills**: GANs, Semantic Search, QLoRA, pgvector, Pinecone, Feature Engineering, BM25, Information Retrieval, LLMs, OpenCV, Data Science, Forecasting, Excel, RAG, Qdrant, Recommendation Systems, Sentence Transformers, LlamaIndex, Python, OpenSearch
-- **Generated Reasoning**: *"7y Staff Machine Learning Engineer at Paytm. Key achievement: Built and shipped a production recommendation system at a marketplace product, going from offline experimentation to live A/B test in 5 months. Directly maps to: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval, search/ranking/retrieval systems."*
+- **Generated Reasoning**: *"7y Staff Machine Learning Engineer at Paytm. Key achievement: Built and shipped a production recommendation system at a marketplace product, going from offline experimentation to live A/B test in 5 months. Demonstrates validated expertise in: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval, search/ranking/retrieval systems."*
 
 ### Career History:
 - **Staff Machine Learning Engineer** at Paytm (2024-11-03 to Present)
@@ -100,7 +100,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Senior AI Engineer at Apple
 - **Years of Experience**: 5.9 YOE
 - **Skills**: Diffusion Models, FAISS, TensorFlow, scikit-learn, OpenSearch, Haystack, Weaviate, Sentence Transformers, QLoRA, NLP, Pinecone, Recommendation Systems, Deep Learning, Python, LangChain, Weights & Biases, OpenCV, Prompt Engineering, Fine-tuning LLMs, YOLO
-- **Generated Reasoning**: *"6y Senior AI Engineer at Apple. Key achievement: Built and shipped a production recommendation system at a marketplace product, going from offline experimentation to live A/B test in 5 months. Directly maps to: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval, search/ranking/retrieval systems."*
+- **Generated Reasoning**: *"6y Senior AI Engineer at Apple. Key achievement: Built and shipped a production recommendation system at a marketplace product, going from offline experimentation to live A/B test in 5 months. Brings deep experience in: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval, search/ranking/retrieval systems."*
 
 ### Career History:
 - **Senior AI Engineer** at Apple (2022-12-14 to Present)
@@ -130,7 +130,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Applied ML Engineer at Sarvam AI
 - **Years of Experience**: 6.6 YOE
 - **Skills**: Flask, Redux, LoRA, Computer Vision, Speech Recognition, Image Classification, Recommendation Systems, Sentence Transformers, LangChain, TensorFlow, Hugging Face Transformers, MLOps, Forecasting, Python, Object Detection, Weaviate, Learning to Rank
-- **Generated Reasoning**: *"7y Applied ML Engineer at Sarvam AI. Key achievement: Developed a semantic search feature for an internal knowledge base of ~500K documents. Directly maps to: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval, search/ranking/retrieval systems."*
+- **Generated Reasoning**: *"7y Applied ML Engineer at Sarvam AI. Key achievement: Developed a semantic search feature for an internal knowledge base of ~500K documents. Strongly aligns with core JD requirements: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval, search/ranking/retrieval systems."*
 
 ### Career History:
 - **Applied ML Engineer** at Sarvam AI (2024-04-07 to Present)
@@ -146,7 +146,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: AI Engineer at Mad Street Den
 - **Years of Experience**: 4.6 YOE
 - **Skills**: LoRA, OpenCV, Statistical Modeling, RAG, Agile, Prompt Engineering, Speech Recognition, Reinforcement Learning, pgvector, FAISS, Embeddings, Sentence Transformers, Weaviate, Time Series, dbt, Qdrant, Elasticsearch, BM25
-- **Generated Reasoning**: *"5y AI Engineer at Mad Street Den. Key achievement: Trained and shipped multiple ranking models for our product's discovery feed using XGBoost and LightGBM. Directly maps to: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval, search/ranking/retrieval systems."*
+- **Generated Reasoning**: *"5y AI Engineer at Mad Street Den. Key achievement: Trained and shipped multiple ranking models for our product's discovery feed using XGBoost and LightGBM. Demonstrates validated expertise in: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval, search/ranking/retrieval systems."*
 
 ### Career History:
 - **AI Engineer** at Mad Street Den (2023-09-10 to Present)
@@ -160,7 +160,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: AI Engineer at Flipkart
 - **Years of Experience**: 16.6 YOE
 - **Skills**: Hugging Face Transformers, scikit-learn, Diffusion Models, Qdrant, Sentence Transformers, RAG, Data Science, LlamaIndex, Kubeflow, LangChain
-- **Generated Reasoning**: *"AI Engineer at Flipkart (16.6 YOE). Notable: Owned the ranking layer for an e-commerce search product, evolving it from a hand-tuned scoring function to a learning-to-rank model over 9 months. JD alignment: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
+- **Generated Reasoning**: *"AI Engineer at Flipkart (16.6 YOE). Notable: Owned the ranking layer for an e-commerce search product, evolving it from a hand-tuned scoring function to a learning-to-rank model over 9 months. Matches key areas: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
 
 ### Career History:
 - **AI Engineer** at Flipkart (2022-02-17 to Present)
@@ -190,7 +190,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Senior NLP Engineer at Netflix
 - **Years of Experience**: 5.2 YOE
 - **Skills**: Statistical Modeling, MLOps, Snowflake, Prompt Engineering, Information Retrieval, Speech Recognition, Semantic Search, Deep Learning, Python, NLP, MLflow, LoRA, RAG, Kubeflow, pgvector, Haystack, Hugging Face Transformers, Embeddings
-- **Generated Reasoning**: *"Senior NLP Engineer at Netflix (5.2 YOE). Notable: Built the data curation pipeline that generated 200K high-quality preference pairs from recruiter labels, plus the eval harness using both ranking... JD alignment: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
+- **Generated Reasoning**: *"Senior NLP Engineer at Netflix (5.2 YOE). Notable: Built the data curation pipeline that generated 200K high-quality preference pairs from recruiter labels, plus the eval harness using both ranking... Shows strong fit on: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
 
 ### Career History:
 - **Senior NLP Engineer** at Netflix (2023-08-11 to Present)
@@ -204,7 +204,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Staff Machine Learning Engineer at Yellow.ai
 - **Years of Experience**: 8.6 YOE
 - **Skills**: Pinecone, QLoRA, LLMs, Hugging Face Transformers, RAG, SAP, TensorFlow, LoRA, Flask, Prompt Engineering, BM25, Elasticsearch, MLOps, pgvector, Learning to Rank, Deep Learning, Python, NLP, YOLO
-- **Generated Reasoning**: *"Staff Machine Learning Engineer at Yellow.ai (8.6 YOE). Notable: Owned the end-to-end ranking pipeline at a recommendations-heavy consumer product: candidate sourcing → embedding generation (using a fine-tuned... JD alignment: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
+- **Generated Reasoning**: *"Staff Machine Learning Engineer at Yellow.ai (8.6 YOE). Notable: Owned the end-to-end ranking pipeline at a recommendations-heavy consumer product: candidate sourcing → embedding generation (using a fine-tuned... Demonstrates capability in: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
 
 ### Career History:
 - **Staff Machine Learning Engineer** at Yellow.ai (2022-09-15 to Present)
@@ -220,7 +220,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Search Engineer at Sarvam AI
 - **Years of Experience**: 7.6 YOE
 - **Skills**: scikit-learn, PyTorch, Milvus, Deep Learning, Semantic Search, Weaviate, Object Detection, RAG, Weights & Biases, BM25, Webpack, Python, QLoRA, Reinforcement Learning
-- **Generated Reasoning**: *"Search Engineer at Sarvam AI (7.6 YOE). Notable: Owned the ranking layer for an e-commerce search product, evolving it from a hand-tuned scoring function to a learning-to-rank model over 9 months. JD alignment: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
+- **Generated Reasoning**: *"Search Engineer at Sarvam AI (7.6 YOE). Notable: Owned the ranking layer for an e-commerce search product, evolving it from a hand-tuned scoring function to a learning-to-rank model over 9 months. Matches key areas: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
 
 ### Career History:
 - **Search Engineer** at Sarvam AI (2023-11-09 to Present)
@@ -254,7 +254,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Senior NLP Engineer at Niramai
 - **Years of Experience**: 7.8 YOE
 - **Skills**: TensorFlow, OpenSearch, FAISS, PEFT, Feature Engineering, Embeddings, LangChain, MLOps, Weaviate, PyTorch, Image Classification, Semantic Search, LlamaIndex
-- **Generated Reasoning**: *"Senior NLP Engineer at Niramai (7.8 YOE). Notable: Owned the end-to-end ranking pipeline at a recommendations-heavy consumer product: candidate sourcing → embedding generation (using a fine-tuned... JD alignment: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
+- **Generated Reasoning**: *"Senior NLP Engineer at Niramai (7.8 YOE). Notable: Owned the end-to-end ranking pipeline at a recommendations-heavy consumer product: candidate sourcing → embedding generation (using a fine-tuned... Shows strong fit on: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
 
 ### Career History:
 - **Senior NLP Engineer** at Niramai (2022-02-17 to Present)
@@ -268,7 +268,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Search Engineer at CRED
 - **Years of Experience**: 5.1 YOE
 - **Skills**: LLMs, BentoML, QLoRA, scikit-learn, Diffusion Models, Elasticsearch, Hugging Face Transformers, Qdrant, Django, MLOps, pgvector, Learning to Rank, LlamaIndex
-- **Generated Reasoning**: *"Search Engineer at CRED (5.1 YOE). Notable: Implemented a RAG-based customer support chatbot integrated with our existing ticketing system. JD alignment: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
+- **Generated Reasoning**: *"Search Engineer at CRED (5.1 YOE). Notable: Implemented a RAG-based customer support chatbot integrated with our existing ticketing system. Demonstrates capability in: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
 
 ### Career History:
 - **Search Engineer** at CRED (2022-06-17 to Present)
@@ -282,7 +282,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Machine Learning Engineer at Netflix
 - **Years of Experience**: 4.7 YOE
 - **Skills**: Reinforcement Learning, Computer Vision, SEO, FAISS, MLflow, LoRA, LangChain, Python, PEFT, Milvus, Deep Learning, Recommendation Systems
-- **Generated Reasoning**: *"Machine Learning Engineer at Netflix (4.7 YOE). Notable: Developed a semantic search feature for an internal knowledge base of ~500K documents. JD alignment: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
+- **Generated Reasoning**: *"Machine Learning Engineer at Netflix (4.7 YOE). Notable: Developed a semantic search feature for an internal knowledge base of ~500K documents. Matches key areas: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
 
 ### Career History:
 - **Machine Learning Engineer** at Netflix (2022-08-16 to Present)
@@ -310,7 +310,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: AI Engineer at CRED
 - **Years of Experience**: 16.9 YOE
 - **Skills**: Information Retrieval, MLflow, FAISS, RAG, Feature Engineering, Data Science, LangChain, SQL, OpenSearch, Embeddings, Prompt Engineering, Accounting, Vue.js, Fine-tuning LLMs, Milvus, Deep Learning
-- **Generated Reasoning**: *"AI Engineer at CRED (16.9 YOE). Notable: Implemented a RAG-based customer support chatbot integrated with our existing ticketing system. JD alignment: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
+- **Generated Reasoning**: *"AI Engineer at CRED (16.9 YOE). Notable: Implemented a RAG-based customer support chatbot integrated with our existing ticketing system. Shows strong fit on: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
 
 ### Career History:
 - **AI Engineer** at CRED (2025-02-01 to Present)
@@ -328,7 +328,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: AI Engineer at upGrad
 - **Years of Experience**: 7.6 YOE
 - **Skills**: YOLO, Kubeflow, Hugging Face Transformers, Hadoop, PEFT, QLoRA, Machine Learning, MLOps, Qdrant, Haystack, LlamaIndex, TensorFlow, Recommendation Systems, Speech Recognition, Photoshop, Azure, BentoML, TTS
-- **Generated Reasoning**: *"AI Engineer at upGrad (7.6 YOE). Notable: Owned the ranking layer for an e-commerce search product, evolving it from a hand-tuned scoring function to a learning-to-rank model over 9 months. JD alignment: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
+- **Generated Reasoning**: *"AI Engineer at upGrad (7.6 YOE). Notable: Owned the ranking layer for an e-commerce search product, evolving it from a hand-tuned scoring function to a learning-to-rank model over 9 months. Demonstrates capability in: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
 
 ### Career History:
 - **AI Engineer** at upGrad (2024-05-07 to Present)
@@ -346,7 +346,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Senior NLP Engineer at Ola
 - **Years of Experience**: 7.8 YOE
 - **Skills**: Learning to Rank, Qdrant, Weights & Biases, pgvector, Sentence Transformers, NLP, Haystack, TensorFlow, Python, Prompt Engineering, Image Classification, Object Detection, Semantic Search, LoRA, Recommendation Systems, Information Retrieval, Hugging Face Transformers
-- **Generated Reasoning**: *"Senior NLP Engineer at Ola (7.8 YOE). Notable: Owned the design and rollout of a large-scale semantic search system serving an internal corpus of 35M+ items. JD alignment: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
+- **Generated Reasoning**: *"Senior NLP Engineer at Ola (7.8 YOE). Notable: Owned the design and rollout of a large-scale semantic search system serving an internal corpus of 35M+ items. Matches key areas: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
 
 ### Career History:
 - **Senior NLP Engineer** at Ola (2024-05-07 to Present)
@@ -376,7 +376,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: AI Engineer at Ola
 - **Years of Experience**: 5.3 YOE
 - **Skills**: LangChain, Reinforcement Learning, Embeddings, Milvus, OpenSearch, Redux, Object Detection, Sentence Transformers, Data Pipelines, Qdrant, Statistical Modeling, BM25, Six Sigma, RAG
-- **Generated Reasoning**: *"AI Engineer at Ola (5.3 YOE). Notable: Trained and shipped multiple ranking models for our product's discovery feed using XGBoost and LightGBM. JD alignment: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
+- **Generated Reasoning**: *"AI Engineer at Ola (5.3 YOE). Notable: Trained and shipped multiple ranking models for our product's discovery feed using XGBoost and LightGBM. Shows strong fit on: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
 
 ### Career History:
 - **AI Engineer** at Ola (2023-04-13 to Present)
@@ -390,7 +390,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: AI Engineer at Rephrase.ai
 - **Years of Experience**: 6.8 YOE
 - **Skills**: PyTorch, LangChain, QLoRA, Fine-tuning LLMs, FAISS, Qdrant, Image Classification, scikit-learn, Feature Engineering, LoRA, BM25, NLP, LLMs, Weights & Biases, Kubeflow
-- **Generated Reasoning**: *"AI Engineer at Rephrase.ai (6.8 YOE). Notable: Developed a semantic search feature for an internal knowledge base of ~500K documents. JD alignment: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
+- **Generated Reasoning**: *"AI Engineer at Rephrase.ai (6.8 YOE). Notable: Developed a semantic search feature for an internal knowledge base of ~500K documents. Demonstrates capability in: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
 
 ### Career History:
 - **AI Engineer** at Rephrase.ai (2023-12-09 to Present)
@@ -406,7 +406,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: AI Engineer at PolicyBazaar
 - **Years of Experience**: 7.7 YOE
 - **Skills**: Vector Search, LlamaIndex, OpenSearch, Java, Qdrant, Feature Engineering, Time Series, Weaviate, Content Writing, NLP, BM25, Deep Learning, LangChain, Hugging Face Transformers, Fine-tuning LLMs, ASR, Diffusion Models, QLoRA, Hadoop
-- **Generated Reasoning**: *"AI Engineer at PolicyBazaar (7.7 YOE). Notable: Developed a semantic search feature for an internal knowledge base of ~500K documents. JD alignment: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
+- **Generated Reasoning**: *"AI Engineer at PolicyBazaar (7.7 YOE). Notable: Developed a semantic search feature for an internal knowledge base of ~500K documents. Matches key areas: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
 
 ### Career History:
 - **AI Engineer** at PolicyBazaar (2022-05-18 to Present)
@@ -436,7 +436,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Junior ML Engineer at Rephrase.ai
 - **Years of Experience**: 5.5 YOE
 - **Skills**: PyTorch, Feature Engineering, Milvus, Redis, HTML, Weights & Biases, OpenCV, Microservices, MLflow, CSS, QLoRA, Learning to Rank, pgvector, Object Detection
-- **Generated Reasoning**: *"Junior ML Engineer at Rephrase.ai (5.5 YOE). Notable: Built NLP pipelines for sentiment analysis and document classification — primarily for an internal feedback-analytics dashboard. JD alignment: vector database experience (FAISS/Milvus/Qdrant), search/ranking/retrieval systems."*
+- **Generated Reasoning**: *"Junior ML Engineer at Rephrase.ai (5.5 YOE). Notable: Built NLP pipelines for sentiment analysis and document classification — primarily for an internal feedback-analytics dashboard. Shows strong fit on: vector database experience (FAISS/Milvus/Qdrant), search/ranking/retrieval systems."*
 
 ### Career History:
 - **Junior ML Engineer** at Rephrase.ai (2025-06-01 to Present)
@@ -452,7 +452,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Search Engineer at Rephrase.ai
 - **Years of Experience**: 4.2 YOE
 - **Skills**: Information Retrieval, YOLO, Data Pipelines, Milvus, BentoML, TensorFlow, Vector Search, LlamaIndex, OpenSearch, MLflow, LLMs, Diffusion Models, Prompt Engineering, TTS
-- **Generated Reasoning**: *"Search Engineer at Rephrase.ai (4.2 YOE). Notable: Built a content recommendation system serving 10M+ users that combined collaborative filtering with content-based ranking. JD alignment: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
+- **Generated Reasoning**: *"Search Engineer at Rephrase.ai (4.2 YOE). Notable: Built a content recommendation system serving 10M+ users that combined collaborative filtering with content-based ranking. Demonstrates capability in: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
 
 ### Career History:
 - **Search Engineer** at Rephrase.ai (2024-02-07 to Present)
@@ -468,7 +468,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Machine Learning Engineer at BYJU'S
 - **Years of Experience**: 4.5 YOE
 - **Skills**: LlamaIndex, Deep Learning, TTS, MLOps, PyTorch, Spring Boot, OpenCV, Marketing, Embeddings, Vector Search, Elasticsearch, Redis, pgvector, Haystack, GANs, Python
-- **Generated Reasoning**: *"Machine Learning Engineer at BYJU'S, 4.5 years. Skills: pgvector, GANs, Vector Search. Partial JD fit on vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval. Based in Noida, Uttar Pradesh, not open to relocation."*
+- **Generated Reasoning**: *"Machine Learning Engineer at BYJU'S, 4.5 years. Skills: pgvector, GANs, Vector Search. Partially aligned with: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval. Based in Noida, Uttar Pradesh, not open to relocation."*
 
 ### Career History:
 - **Machine Learning Engineer** at BYJU'S (2024-02-07 to Present)
@@ -482,7 +482,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Applied ML Engineer at CRED
 - **Years of Experience**: 5.1 YOE
 - **Skills**: QLoRA, Kubeflow, YOLO, Elasticsearch, PyTorch, OpenSearch, Information Retrieval, Forecasting, Statistical Modeling, LlamaIndex, Weaviate, Deep Learning, PEFT, Milvus, scikit-learn, Qdrant, Illustrator, Java
-- **Generated Reasoning**: *"Applied ML Engineer at CRED, 5.1 years. Skills: PyTorch, YOLO, Qdrant. Partial JD fit on vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
+- **Generated Reasoning**: *"Applied ML Engineer at CRED, 5.1 years. Skills: PyTorch, YOLO, Qdrant. Partial JD fit on: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
 
 ### Career History:
 - **Applied ML Engineer** at CRED (2023-04-13 to Present)
@@ -496,7 +496,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Search Engineer at Netflix
 - **Years of Experience**: 6.0 YOE
 - **Skills**: Machine Learning, Kubeflow, Embeddings, FAISS, Feature Engineering, OpenCV, Milvus, BigQuery, CNN, Python, LangChain, Semantic Search, QLoRA, Java, LLMs, Hugging Face Transformers, Forecasting, Weights & Biases
-- **Generated Reasoning**: *"Search Engineer at Netflix, 6.0 years. Skills: Python, Milvus, Kubeflow. Partial JD fit on vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval. Based in Austin, not open to relocation."*
+- **Generated Reasoning**: *"Search Engineer at Netflix, 6.0 years. Skills: Python, Milvus, Kubeflow. Demonstrated competence in: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval. Based in Austin, not open to relocation."*
 
 ### Career History:
 - **Search Engineer** at Netflix (2024-02-07 to Present)
@@ -512,7 +512,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Search Engineer at Verloop.io
 - **Years of Experience**: 4.2 YOE
 - **Skills**: PEFT, TTS, scikit-learn, OpenCV, Semantic Search, BentoML, Fine-tuning LLMs, TensorFlow, Information Retrieval, Diffusion Models, Milvus, Deep Learning, Qdrant, FAISS, Airflow, Object Detection, NLP, Forecasting, pgvector
-- **Generated Reasoning**: *"Search Engineer at Verloop.io, 4.2 years. Skills: NLP, Forecasting, FAISS. Partial JD fit on vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval. Based in Mumbai, Maharashtra, not open to relocation."*
+- **Generated Reasoning**: *"Search Engineer at Verloop.io, 4.2 years. Skills: NLP, Forecasting, FAISS. Brings partial overlap in: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval. Based in Mumbai, Maharashtra, not open to relocation."*
 
 ### Career History:
 - **Search Engineer** at Verloop.io (2024-12-03 to Present)
@@ -526,7 +526,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: AI Engineer at Krutrim
 - **Years of Experience**: 5.8 YOE
 - **Skills**: MLOps, Machine Learning, LlamaIndex, Time Series, Recommendation Systems, Pinecone, PyTorch, Hugging Face Transformers, Sentence Transformers, YOLO, Statistical Modeling, Reinforcement Learning
-- **Generated Reasoning**: *"AI Engineer at Krutrim, 5.8 years. Skills: Hugging Face Transformers, Sentence Transformers, Reinforcement Learning. Partial JD fit on vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval. Logistics concern: 90-day notice (standard)."*
+- **Generated Reasoning**: *"AI Engineer at Krutrim, 5.8 years. Skills: Hugging Face Transformers, Sentence Transformers, Reinforcement Learning. Partially aligned with: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval. Logistics concern: 90-day notice (standard)."*
 
 ### Career History:
 - **AI Engineer** at Krutrim (2024-06-06 to Present)
@@ -542,7 +542,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Senior Applied Scientist at Swiggy
 - **Years of Experience**: 5.4 YOE
 - **Skills**: Information Retrieval Systems, Content Matching, Text Encoders, TensorFlow, Search & Discovery, CNN, Model Adaptation, Machine Learning, Ranking Systems, Diffusion Models, OpenSearch, Computer Vision, Milvus, Recommendation Systems
-- **Generated Reasoning**: *"Senior Applied Scientist at Swiggy, 5.4 years. Skills: Search & Discovery, Text Encoders, Content Matching. Partial JD fit on vector database experience (FAISS/Milvus/Qdrant), search/ranking/retrieval systems."*
+- **Generated Reasoning**: *"Senior Applied Scientist at Swiggy, 5.4 years. Skills: Search & Discovery, Text Encoders, Content Matching. Partial JD fit on: vector database experience (FAISS/Milvus/Qdrant), search/ranking/retrieval systems."*
 
 ### Career History:
 - **Senior Applied Scientist** at Swiggy (2025-04-02 to Present)
@@ -558,7 +558,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: AI Research Engineer at BYJU'S
 - **Years of Experience**: 3.5 YOE
 - **Skills**: Diffusion Models, Speech Recognition, Scrum, Reinforcement Learning, gRPC, MLflow, Semantic Search, Information Retrieval, PyTorch, HTML, FAISS, GANs, QLoRA, GCP, LoRA, Python
-- **Generated Reasoning**: *"AI Research Engineer at BYJU'S, 3.5 years. Skills: GANs, Diffusion Models, LoRA. Partial JD fit on vector database experience (FAISS/Milvus/Qdrant), search/ranking/retrieval systems. Based in Chandigarh, Chandigarh, not open to relocation."*
+- **Generated Reasoning**: *"AI Research Engineer at BYJU'S, 3.5 years. Skills: GANs, Diffusion Models, LoRA. Demonstrated competence in: vector database experience (FAISS/Milvus/Qdrant), search/ranking/retrieval systems. Based in Chandigarh, Chandigarh, not open to relocation."*
 
 ### Career History:
 - **AI Research Engineer** at BYJU'S (2022-12-14 to Present)
@@ -570,7 +570,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Applied ML Engineer at Rephrase.ai
 - **Years of Experience**: 6.6 YOE
 - **Skills**: Sentence Transformers, Milvus, LoRA, Embeddings, NLP, Time Series, Image Classification, LangChain, ASR, Vector Search, BM25, MLflow, TTS, TensorFlow, PEFT, LLMs, Qdrant
-- **Generated Reasoning**: *"Applied ML Engineer at Rephrase.ai, 6.6 years. Skills: Sentence Transformers, NLP, PEFT. Partial JD fit on vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval. Based in Delhi, Delhi, not open to relocation."*
+- **Generated Reasoning**: *"Applied ML Engineer at Rephrase.ai, 6.6 years. Skills: Sentence Transformers, NLP, PEFT. Brings partial overlap in: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval. Based in Delhi, Delhi, not open to relocation."*
 
 ### Career History:
 - **Applied ML Engineer** at Rephrase.ai (2022-08-16 to Present)
@@ -584,7 +584,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Senior AI Engineer at Adobe
 - **Years of Experience**: 5.9 YOE
 - **Skills**: Project Management, Vector Representations, Deep Learning, Content Matching, Apache Flink, Feature Engineering, Statistical Modeling, QLoRA, Python, PyTorch, ASR, Data Science, LoRA, Information Retrieval Systems, pgvector, Haystack, Workflow Orchestration, TTS, Natural Language Processing
-- **Generated Reasoning**: *"Senior AI Engineer at Adobe, 5.9 years. Skills: Information Retrieval Systems, TTS, pgvector. Partial JD fit on vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
+- **Generated Reasoning**: *"Senior AI Engineer at Adobe, 5.9 years. Skills: Information Retrieval Systems, TTS, pgvector. Partially aligned with: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
 
 ### Career History:
 - **Senior AI Engineer** at Adobe (2025-03-03 to Present)
@@ -602,7 +602,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: AI Research Engineer at Razorpay
 - **Years of Experience**: 6.5 YOE
 - **Skills**: Diffusion Models, GANs, MLflow, BentoML, Reinforcement Learning, Information Retrieval, Project Management, pgvector, LLMs, FAISS, Kubeflow, TTS
-- **Generated Reasoning**: *"AI Research Engineer at Razorpay, 6.5 years. Skills: pgvector, GANs, TTS. Partial JD fit on vector database experience (FAISS/Milvus/Qdrant), search/ranking/retrieval systems."*
+- **Generated Reasoning**: *"AI Research Engineer at Razorpay, 6.5 years. Skills: pgvector, GANs, TTS. Partial JD fit on: vector database experience (FAISS/Milvus/Qdrant), search/ranking/retrieval systems."*
 
 ### Career History:
 - **AI Research Engineer** at Razorpay (2023-08-11 to Present)
@@ -618,7 +618,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: AI Engineer at PharmEasy
 - **Years of Experience**: 5.9 YOE
 - **Skills**: Statistical Modeling, Object Detection, Semantic Search, BM25, Information Retrieval, Prompt Engineering, Diffusion Models, Feature Engineering, React, Python, LlamaIndex, PEFT, Recommendation Systems, Elasticsearch, QLoRA, Haystack
-- **Generated Reasoning**: *"AI Engineer at PharmEasy, 5.9 years. Skills: Python, Elasticsearch, Recommendation Systems. Partial JD fit on vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
+- **Generated Reasoning**: *"AI Engineer at PharmEasy, 5.9 years. Skills: Python, Elasticsearch, Recommendation Systems. Demonstrated competence in: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
 
 ### Career History:
 - **AI Engineer** at PharmEasy (2025-04-02 to Present)
@@ -634,7 +634,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Search Engineer at Haptik
 - **Years of Experience**: 5.2 YOE
 - **Skills**: PEFT, Weaviate, Angular, Feature Engineering, GANs, Vector Search, TensorFlow, Computer Vision, BM25, Semantic Search, Recommendation Systems, CNN, Hugging Face Transformers, Spring Boot, Reinforcement Learning, Qdrant, Pinecone, Deep Learning
-- **Generated Reasoning**: *"Search Engineer at Haptik, 5.2 years. Skills: Computer Vision, Semantic Search, Weaviate. Partial JD fit on vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
+- **Generated Reasoning**: *"Search Engineer at Haptik, 5.2 years. Skills: Computer Vision, Semantic Search, Weaviate. Brings partial overlap in: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
 
 ### Career History:
 - **Search Engineer** at Haptik (2023-09-10 to Present)
@@ -650,7 +650,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: AI Engineer at Mad Street Den
 - **Years of Experience**: 6.3 YOE
 - **Skills**: CNN, BM25, Computer Vision, Prompt Engineering, Embeddings, Data Science, QLoRA, ASR, Fine-tuning LLMs, TensorFlow, Deep Learning, scikit-learn, Object Detection, PyTorch, Semantic Search
-- **Generated Reasoning**: *"AI Engineer at Mad Street Den, 6.3 years. Skills: Embeddings, TensorFlow, PyTorch. Partial JD fit on vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval. Logistics concern: 90-day notice (standard)."*
+- **Generated Reasoning**: *"AI Engineer at Mad Street Den, 6.3 years. Skills: Embeddings, TensorFlow, PyTorch. Partially aligned with: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval. Logistics concern: 90-day notice (standard)."*
 
 ### Career History:
 - **AI Engineer** at Mad Street Den (2025-03-03 to Present)
@@ -668,7 +668,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: NLP Engineer at Rephrase.ai
 - **Years of Experience**: 5.9 YOE
 - **Skills**: MLflow, Pinecone, Milvus, Forecasting, Data Science, Hugging Face Transformers, GANs, PEFT, BM25, LlamaIndex, SQL, Learning to Rank, Fine-tuning LLMs, Machine Learning, Sentence Transformers, Node.js, Feature Engineering, Embeddings
-- **Generated Reasoning**: *"NLP Engineer at Rephrase.ai, 5.9 years. Skills: Sentence Transformers, Embeddings, LlamaIndex. Partial JD fit on vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval. Logistics concern: long 120-day notice period."*
+- **Generated Reasoning**: *"NLP Engineer at Rephrase.ai, 5.9 years. Skills: Sentence Transformers, Embeddings, LlamaIndex. Partial JD fit on: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval. Logistics concern: long 120-day notice period."*
 
 ### Career History:
 - **NLP Engineer** at Rephrase.ai (2023-06-12 to Present)
@@ -682,7 +682,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Search Engineer at Haptik
 - **Years of Experience**: 7.6 YOE
 - **Skills**: Fine-tuning LLMs, Reinforcement Learning, Hugging Face Transformers, Weaviate, Time Series, LlamaIndex, LLMs, SAP, Feature Engineering, Image Classification, Kafka, Forecasting, Learning to Rank, Elasticsearch, Semantic Search, PEFT
-- **Generated Reasoning**: *"Search Engineer at Haptik, 7.6 years. Skills: Hugging Face Transformers, Image Classification, Forecasting. Partial JD fit on vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
+- **Generated Reasoning**: *"Search Engineer at Haptik, 7.6 years. Skills: Hugging Face Transformers, Image Classification, Forecasting. Demonstrated competence in: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
 
 ### Career History:
 - **Search Engineer** at Haptik (2023-12-09 to Present)
@@ -698,7 +698,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Machine Learning Engineer at BYJU'S
 - **Years of Experience**: 5.1 YOE
 - **Skills**: Microservices, Object Detection, OpenCV, Embeddings, Qdrant, LoRA, Learning to Rank, Fine-tuning LLMs, Semantic Search, GANs, PyTorch, Weights & Biases, BM25, RAG, NLP
-- **Generated Reasoning**: *"Machine Learning Engineer at BYJU'S, 5.1 years. Skills: BM25, RAG, Weights & Biases. Partial JD fit on vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
+- **Generated Reasoning**: *"Machine Learning Engineer at BYJU'S, 5.1 years. Skills: BM25, RAG, Weights & Biases. Brings partial overlap in: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
 
 ### Career History:
 - **Machine Learning Engineer** at BYJU'S (2022-05-18 to Present)
@@ -712,7 +712,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Search Engineer at Google
 - **Years of Experience**: 7.2 YOE
 - **Skills**: SAP, Kubeflow, Embeddings, Haystack, YOLO, LoRA, PowerPoint, Learning to Rank, Information Retrieval, PEFT, QLoRA, PyTorch, pgvector, NLP, Weights & Biases
-- **Generated Reasoning**: *"Search Engineer at Google, 7.2 years. Skills: LoRA, PyTorch, QLoRA. Partial JD fit on vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval. Logistics concern: long 120-day notice period."*
+- **Generated Reasoning**: *"Search Engineer at Google, 7.2 years. Skills: LoRA, PyTorch, QLoRA. Partially aligned with: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval. Logistics concern: long 120-day notice period."*
 
 ### Career History:
 - **Search Engineer** at Google (2023-10-10 to Present)
@@ -728,7 +728,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Staff Machine Learning Engineer at Salesforce
 - **Years of Experience**: 8.8 YOE
 - **Skills**: Search Backend, LoRA, Vue.js, Tally, Search & Discovery, MLOps, Search Infrastructure, MLflow, Open-source ML libraries, Information Retrieval Systems, Elasticsearch, Computer Vision, Deep Learning, Natural Language Processing, QLoRA, YOLO, OpenSearch, Python, Milvus, ASR, TensorFlow
-- **Generated Reasoning**: *"Staff Machine Learning Engineer at Salesforce, 8.8 years. Skills: OpenSearch, Deep Learning, Search Infrastructure. Partial JD fit on vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
+- **Generated Reasoning**: *"Staff Machine Learning Engineer at Salesforce, 8.8 years. Skills: OpenSearch, Deep Learning, Search Infrastructure. Partial JD fit on: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
 
 ### Career History:
 - **Staff Machine Learning Engineer** at Salesforce (2023-04-13 to Present)
@@ -746,7 +746,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Lead AI Engineer at Sarvam AI
 - **Years of Experience**: 6.4 YOE
 - **Skills**: pgvector, Deep Learning, Qdrant, Elasticsearch, Feature Engineering, Text Encoders, PEFT, Spring Boot, Python, Redis, Haystack, Machine Learning, Open-source ML libraries, Ranking Systems, LoRA, Information Retrieval Systems, Search Backend, GANs, NLP
-- **Generated Reasoning**: *"Lead AI Engineer at Sarvam AI, 6.4 years. Skills: PEFT, Deep Learning, NLP. Partial JD fit on vector database experience (FAISS/Milvus/Qdrant), search/ranking/retrieval systems. Based in Delhi, Delhi, not open to relocation."*
+- **Generated Reasoning**: *"Lead AI Engineer at Sarvam AI, 6.4 years. Skills: PEFT, Deep Learning, NLP. Demonstrated competence in: vector database experience (FAISS/Milvus/Qdrant), search/ranking/retrieval systems. Based in Delhi, Delhi, not open to relocation."*
 
 ### Career History:
 - **Lead AI Engineer** at Sarvam AI (2024-05-07 to Present)
@@ -762,7 +762,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Senior Data Scientist at Sarvam AI
 - **Years of Experience**: 7.4 YOE
 - **Skills**: Haystack, Redis, Prompt Engineering, Object Detection, Deep Learning, TensorFlow, Fine-tuning LLMs, Recommendation Systems, QLoRA, OpenCV, Semantic Search, Weaviate, scikit-learn, RAG, Microservices, Information Retrieval, Kubeflow
-- **Generated Reasoning**: *"Senior Data Scientist at Sarvam AI, 7.4 years. Skills: Information Retrieval, QLoRA, RAG. Partial JD fit on vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval. Logistics concern: 90-day notice (standard)."*
+- **Generated Reasoning**: *"Senior Data Scientist at Sarvam AI, 7.4 years. Skills: Information Retrieval, QLoRA, RAG. Brings partial overlap in: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval. Logistics concern: 90-day notice (standard)."*
 
 ### Career History:
 - **Senior Data Scientist** at Sarvam AI (2024-12-03 to Present)
@@ -780,7 +780,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Search Engineer at Rephrase.ai
 - **Years of Experience**: 4.8 YOE
 - **Skills**: Go, Kubeflow, OpenSearch, Elasticsearch, Feature Engineering, Sentence Transformers, Milvus, Vector Search, Weaviate, Accounting, FAISS, GANs
-- **Generated Reasoning**: *"Search Engineer at Rephrase.ai, 4.8 years. Skills: FAISS, Milvus, Vector Search. Partial JD fit on vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
+- **Generated Reasoning**: *"Search Engineer at Rephrase.ai, 4.8 years. Skills: FAISS, Milvus, Vector Search. Partially aligned with: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
 
 ### Career History:
 - **Search Engineer** at Rephrase.ai (2024-09-04 to Present)
@@ -796,7 +796,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Applied ML Engineer at Aganitha
 - **Years of Experience**: 6.4 YOE
 - **Skills**: Diffusion Models, PyTorch, GANs, Machine Learning, Learning to Rank, NLP, CNN, Semantic Search, TTS, Weights & Biases, Data Science, LlamaIndex, Sentence Transformers, LangChain
-- **Generated Reasoning**: *"Applied ML Engineer at Aganitha, 6.4 years. Skills: Learning to Rank, GANs, Sentence Transformers. Partial JD fit on vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
+- **Generated Reasoning**: *"Applied ML Engineer at Aganitha, 6.4 years. Skills: Learning to Rank, GANs, Sentence Transformers. Partial JD fit on: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
 
 ### Career History:
 - **Applied ML Engineer** at Aganitha (2022-10-15 to Present)
@@ -810,7 +810,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Lead AI Engineer at Meta
 - **Years of Experience**: 8.6 YOE
 - **Skills**: Prompt Engineering, scikit-learn, Hugging Face Transformers, Learning to Rank, Semantic Search, Qdrant, Fine-tuning LLMs, Agile, Vector Search, TTS, NLP, Object Detection, MLOps, FAISS, Weights & Biases, Weaviate
-- **Generated Reasoning**: *"Lead AI Engineer at Meta, 8.6 years. Skills: scikit-learn, NLP, Weaviate. Partial JD fit on vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
+- **Generated Reasoning**: *"Lead AI Engineer at Meta, 8.6 years. Skills: scikit-learn, NLP, Weaviate. Demonstrated competence in: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
 
 ### Career History:
 - **Lead AI Engineer** at Meta (2023-10-10 to Present)
@@ -826,7 +826,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Senior Data Scientist at CRED
 - **Years of Experience**: 4.7 YOE
 - **Skills**: MLflow, Embeddings, Semantic Search, PyTorch, gRPC, ASR, Reinforcement Learning, Docker, Qdrant, Forecasting, PEFT, MLOps, Fine-tuning LLMs, Prompt Engineering, Haystack, Vector Search, BentoML, LlamaIndex, BigQuery, LoRA
-- **Generated Reasoning**: *"Senior Data Scientist at CRED, 4.7 years. Skills: Prompt Engineering, LlamaIndex, Semantic Search. Partial JD fit on vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
+- **Generated Reasoning**: *"Senior Data Scientist at CRED, 4.7 years. Skills: Prompt Engineering, LlamaIndex, Semantic Search. Brings partial overlap in: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
 
 ### Career History:
 - **Senior Data Scientist** at CRED (2024-06-06 to Present)
@@ -840,7 +840,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: AI Research Engineer at HCL
 - **Years of Experience**: 5.6 YOE
 - **Skills**: Semantic Search, PEFT, Information Retrieval, Weights & Biases, FAISS, Flask, Next.js, PyTorch, OpenSearch, OpenCV, Kubeflow, Recommendation Systems, Elasticsearch, CNN
-- **Generated Reasoning**: *"AI Research Engineer at HCL, 5.6 years. Skills: Elasticsearch, CNN, Semantic Search. Partial JD fit on vector database experience (FAISS/Milvus/Qdrant), search/ranking/retrieval systems. Based in Jaipur, Rajasthan, not open to relocation."*
+- **Generated Reasoning**: *"AI Research Engineer at HCL, 5.6 years. Skills: Elasticsearch, CNN, Semantic Search. Partially aligned with: vector database experience (FAISS/Milvus/Qdrant), search/ranking/retrieval systems. Based in Jaipur, Rajasthan, not open to relocation."*
 
 ### Career History:
 - **AI Research Engineer** at HCL (2022-09-15 to Present)
@@ -854,7 +854,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: AI Research Engineer at Verloop.io
 - **Years of Experience**: 4.3 YOE
 - **Skills**: Kubeflow, Data Science, OpenCV, Information Retrieval, GANs, dbt, Snowflake, MLOps, MLflow, PyTorch, Time Series, Haystack, Diffusion Models, Fine-tuning LLMs
-- **Generated Reasoning**: *"AI Research Engineer at Verloop.io, 4.3 years. Skills: Time Series, MLflow, MLOps. Partial JD fit on search/ranking/retrieval systems, production ML system deployment. Based in Noida, Uttar Pradesh, not open to relocation."*
+- **Generated Reasoning**: *"AI Research Engineer at Verloop.io, 4.3 years. Skills: Time Series, MLflow, MLOps. Partial JD fit on: search/ranking/retrieval systems, production ML system deployment. Based in Noida, Uttar Pradesh, not open to relocation."*
 
 ### Career History:
 - **AI Research Engineer** at Verloop.io (2024-12-03 to Present)
@@ -868,7 +868,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Applied ML Engineer at Saarthi.ai
 - **Years of Experience**: 5.8 YOE
 - **Skills**: LlamaIndex, Feature Engineering, MLflow, Computer Vision, TTS, Learning to Rank, OpenSearch, Vector Search, Milvus, QLoRA, Embeddings, CNN, LLMs, Deep Learning, Recommendation Systems, Elasticsearch, PyTorch
-- **Generated Reasoning**: *"Applied ML Engineer at Saarthi.ai, 5.8 years. Skills: Elasticsearch, Milvus, TTS. Partial JD fit on vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval. Based in Jaipur, Rajasthan, not open to relocation."*
+- **Generated Reasoning**: *"Applied ML Engineer at Saarthi.ai, 5.8 years. Skills: Elasticsearch, Milvus, TTS. Demonstrated competence in: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval. Based in Jaipur, Rajasthan, not open to relocation."*
 
 ### Career History:
 - **Applied ML Engineer** at Saarthi.ai (2023-02-12 to Present)
@@ -884,7 +884,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Search Engineer at Dream11
 - **Years of Experience**: 4.5 YOE
 - **Skills**: Semantic Search, BM25, MLOps, OpenSearch, Recommendation Systems, LlamaIndex, scikit-learn, GCP, Docker, PyTorch, Weaviate, MLflow, LoRA, Sentence Transformers, Reinforcement Learning, Speech Recognition, Information Retrieval
-- **Generated Reasoning**: *"Search Engineer at Dream11, 4.5 years. Skills: LoRA, Semantic Search, BM25. Partial JD fit on vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
+- **Generated Reasoning**: *"Search Engineer at Dream11, 4.5 years. Skills: LoRA, Semantic Search, BM25. Brings partial overlap in: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
 
 ### Career History:
 - **Search Engineer** at Dream11 (2023-09-10 to Present)
@@ -898,7 +898,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: AI Research Engineer at Flipkart
 - **Years of Experience**: 3.9 YOE
 - **Skills**: Embeddings, Data Science, LlamaIndex, Qdrant, CSS, Speech Recognition, MLflow, Learning to Rank, RAG, Information Retrieval, Docker, Illustrator, GANs, Vue.js
-- **Generated Reasoning**: *"AI Research Engineer at Flipkart, 3.9 years. Skills: Learning to Rank, LlamaIndex, Information Retrieval. Partial JD fit on vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval. Logistics concern: 90-day notice (standard)."*
+- **Generated Reasoning**: *"AI Research Engineer at Flipkart, 3.9 years. Skills: Learning to Rank, LlamaIndex, Information Retrieval. Partially aligned with: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval. Logistics concern: 90-day notice (standard)."*
 
 ### Career History:
 - **AI Research Engineer** at Flipkart (2023-06-12 to Present)
@@ -912,7 +912,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Recommendation Systems Engineer at Saarthi.ai
 - **Years of Experience**: 6.6 YOE
 - **Skills**: Data Science, Weaviate, Python, Recommendation Systems, PowerPoint, LLMs, TensorFlow, Hugging Face Transformers, SEO, YOLO, Flask, scikit-learn, PEFT, GANs
-- **Generated Reasoning**: *"Recommendation Systems Engineer at Saarthi.ai, 6.6 years. Skills: TensorFlow, GANs, Hugging Face Transformers. Partial JD fit on vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval. Logistics concern: 90-day notice (standard)."*
+- **Generated Reasoning**: *"Recommendation Systems Engineer at Saarthi.ai, 6.6 years. Skills: TensorFlow, GANs, Hugging Face Transformers. Partial JD fit on: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval. Logistics concern: 90-day notice (standard)."*
 
 ### Career History:
 - **Recommendation Systems Engineer** at Saarthi.ai (2024-02-07 to Present)

@@ -237,7 +237,14 @@ def assemble_reasoning(candidate: Dict[str, Any], rank: int, pre_verified_narrat
         
         # Add specific JD match details
         if jd_matches:
-            parts.append(f"Directly maps to: {', '.join(jd_matches[:3])}.")
+            match_str = ", ".join(jd_matches[:3])
+            templates = [
+                f"Directly maps to: {match_str}.",
+                f"Strongly aligns with core JD requirements: {match_str}.",
+                f"Demonstrates validated expertise in: {match_str}.",
+                f"Brings deep experience in: {match_str}."
+            ]
+            parts.append(templates[rank % len(templates)])
         if top_skills:
             parts.append(f"Core skills: {top_skills}.")
         
@@ -257,7 +264,14 @@ def assemble_reasoning(candidate: Dict[str, Any], rank: int, pre_verified_narrat
             parts.append(f"{title} at {company} with {yoe:.1f} years experience.")
         
         if jd_matches:
-            parts.append(f"JD alignment: {', '.join(jd_matches[:2])}.")
+            match_str = ", ".join(jd_matches[:2])
+            templates = [
+                f"JD alignment: {match_str}.",
+                f"Shows strong fit on: {match_str}.",
+                f"Demonstrates capability in: {match_str}.",
+                f"Matches key areas: {match_str}."
+            ]
+            parts.append(templates[rank % len(templates)])
         if top_skills:
             parts.append(f"Verified skills: {top_skills}.")
         
@@ -277,7 +291,14 @@ def assemble_reasoning(candidate: Dict[str, Any], rank: int, pre_verified_narrat
         
         # Highlight what matches and what's missing
         if jd_matches:
-            parts.append(f"Partial JD fit on {', '.join(jd_matches[:2])}.")
+            match_str = ", ".join(jd_matches[:2])
+            templates = [
+                f"Partial JD fit on: {match_str}.",
+                f"Demonstrated competence in: {match_str}.",
+                f"Brings partial overlap in: {match_str}.",
+                f"Partially aligned with: {match_str}."
+            ]
+            parts.append(templates[rank % len(templates)])
         else:
             parts.append("Limited direct overlap with core JD requirements (embeddings, vector DBs, eval metrics).")
         
