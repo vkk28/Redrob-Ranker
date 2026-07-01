@@ -44,7 +44,7 @@ OFFER_ACCEPTANCE_RATE_SENTINEL = -1.0
 GITHUB_ACTIVITY_SCORE_SENTINEL = -1.0
 
 # LLM Feature Extraction & Narrative settings
-REDUCED_POOL_SIZE = 4000  # Number of candidates retrieved via FAISS to run LLM verification on
+REDUCED_POOL_SIZE = 12000  # Number of candidates retrieved via FAISS to run LLM verification on
 CROSS_ENCODER_TOP_K = 200 # Number of candidates to rerank via Cross-Encoder
 
 # Embedded Signal Weightings (behavioral multipliers)

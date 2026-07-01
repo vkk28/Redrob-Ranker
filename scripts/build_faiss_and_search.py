@@ -21,7 +21,7 @@ def main():
     print("JD embedding loaded, shape:", jd_embedding.shape)
     
     print("Searching Flat index...")
-    distances, indices = index.search(jd_embedding.reshape(1, -1), 4000)
+    distances, indices = index.search(jd_embedding.reshape(1, -1), 12000)
     
     retrieved = indices[0].tolist()
     with open(artifacts_dir / "retrieved_indices.json", "w") as f:

@@ -22,14 +22,15 @@ ADJACENT_TITLES = [
 ]
 
 MISMATCH_TITLES = [
-    "marketing", "sales", "hr ", "recruiter", "operations", "ui/ux", "product manager",
+    "marketing", "sales", "hr", "human resources", "recruiter", "operations", "ui/ux", "product manager",
     "project manager", "designer", "scrum master", "business analyst", "finance",
     "mechanical engineer", "civil engineer", "electrical engineer", "chemical engineer",
     "manufacturing engineer", "industrial engineer", "quality engineer", "qa manager",
-    "content writer", "copywriter", "graphic designer", "accountant",
+    "content writer", "copywriter", "graphic designer", "accountant", "accounting",
     "intern", "trainee", "associate consultant", "process associate",
     "support engineer", "customer success", "technical writer", "procurement",
     "supply chain", "logistics manager", "real estate", "pharmacy",
+    "customer support", "customer service", "support specialist", "help desk",
 ]
 
 def check_title_match(title: str) -> float:
