@@ -95,14 +95,16 @@ def calculate_logistics_score(candidate: Dict[str, Any]) -> float:
 def calculate_behavioral_multiplier(candidate: Dict[str, Any]) -> float:
     """
     Compute a behavioral multiplier based on responsiveness, activity date, and open-to-work flag.
-    Bounded between 0.60 and 1.0.
+    The JD explicitly says: "A perfect-on-paper candidate who hasn't logged in for 6 months 
+    and has a 5% recruiter response rate is, for hiring purposes, not actually available."
+    Bounded between 0.40 and 1.0 (sharper penalty than before).
     """
     signals = candidate.get("redrob_signals", {})
     
-    # 1. Recruiter Response Rate
+    # 1. Recruiter Response Rate — JD says this is critical
     response_rate = signals.get("recruiter_response_rate", 0.5)
     
-    # 2. Last Active Date Decay
+    # 2. Last Active Date Decay — JD says 6 months inactive = not available
     last_active_str = signals.get("last_active_date")
     ref_date = datetime.strptime(config.REFERENCE_DATE_STR, "%Y-%m-%d")
     
@@ -112,17 +114,17 @@ def calculate_behavioral_multiplier(candidate: Dict[str, Any]) -> float:
         if days_since_active <= 30:
             activity_factor = 1.0
         elif days_since_active <= 90:
-            activity_factor = 0.8
+            activity_factor = 0.85
         elif days_since_active <= 180:
-            activity_factor = 0.6
+            activity_factor = 0.5
         else:
-            activity_factor = 0.3
+            activity_factor = 0.2  # "not actually available" per JD
     else:
         activity_factor = 0.3
         
     # 3. Open to Work
     open_to_work = signals.get("open_to_work_flag", False)
-    otw_factor = 1.0 if open_to_work else 0.8
+    otw_factor = 1.0 if open_to_work else 0.75
     
     # 4. Interview Completion
     interview_rate = signals.get("interview_completion_rate", 1.0)
@@ -130,50 +132,88 @@ def calculate_behavioral_multiplier(candidate: Dict[str, Any]) -> float:
 
     raw_behavioral = response_rate * activity_factor * otw_factor * interview_factor
     
-    # Sharpened behavioral multiplier: 0.60 + 0.40 * raw_behavioral
-    return 0.60 + (0.40 * raw_behavioral)
+    # Sharper behavioral multiplier: 0.40 + 0.60 * raw_behavioral
+    # This gives a wider range [0.40, 1.0] so behavioral signals matter more
+    return 0.40 + (0.60 * raw_behavioral)
 
 def calculate_skill_match_score(candidate: Dict[str, Any]) -> float:
     """
-    Compute a skills matching score based on critical JD skills (FAISS, RAG, embeddings, etc.).
+    Compute a skills matching score based on critical JD skills.
+    
+    Key insight from the JD: "The right answer is not 'find candidates whose skills section 
+    contains the most AI keywords.' That's a trap we've explicitly built into the dataset."
+    
+    So we weight skills found in career history descriptions much higher than skills
+    merely listed in the skills section.
     """
     skills = candidate.get("skills", [])
+    history = candidate.get("career_history", [])
+    summary = candidate.get("profile", {}).get("summary", "").lower()
     
-    target_skills = {
+    # Build history text for evidence checking
+    history_text = " ".join([r.get("description", "") for r in history]).lower()
+    full_evidence_text = f"{summary} {history_text}"
+    
+    # Core JD skills grouped by importance
+    critical_skills = {
         "faiss", "milvus", "qdrant", "pinecone", "weaviate", "elasticsearch", "opensearch",
         "rag", "retrieval", "vector search", "hybrid search", "embeddings", "sentence-transformers",
-        "nlp", "evaluation", "ndcg", "map", "mrr", "python"
+    }
+    important_skills = {
+        "nlp", "evaluation", "ndcg", "map", "mrr", "ranking", "recommendation",
+        "learning to rank", "information retrieval",
+    }
+    supporting_skills = {
+        "python", "pytorch", "tensorflow", "scikit-learn", "xgboost",
     }
     
     score = 0.0
     matches = 0
+    
     for s in skills:
         name = s.get("name", "").lower()
-        if any(ts in name for ts in target_skills):
-            prof = s.get("proficiency", "beginner").lower()
-            dur = s.get("duration_months", 0) or 0
+        prof = s.get("proficiency", "beginner").lower()
+        dur = s.get("duration_months", 0) or 0
+        
+        # Determine which tier this skill belongs to
+        skill_tier_weight = 0.0
+        if any(ts in name for ts in critical_skills):
+            skill_tier_weight = 1.0
+        elif any(ts in name for ts in important_skills):
+            skill_tier_weight = 0.7
+        elif any(ts in name for ts in supporting_skills):
+            skill_tier_weight = 0.4
+        else:
+            continue  # Not a JD-relevant skill
+        
+        # Proficiency weighting
+        if prof == "expert":
+            prof_mult = 1.0
+        elif prof == "advanced":
+            prof_mult = 0.8
+        elif prof == "intermediate":
+            prof_mult = 0.6
+        else:
+            prof_mult = 0.3
             
-            # Proficiency weighting
-            if prof == "expert":
-                prof_mult = 1.0
-            elif prof == "advanced":
-                prof_mult = 0.8
-            elif prof == "intermediate":
-                prof_mult = 0.6
-            else:
-                prof_mult = 0.3
-                
-            # Duration weighting
-            dur_mult = min(1.0, dur / 36.0) # Cap at 3 years
-            
-            score += prof_mult * (0.5 + 0.5 * dur_mult)
-            matches += 1
-            
+        # Duration weighting (cap at 3 years)
+        dur_mult = min(1.0, dur / 36.0)
+        
+        # CRITICAL: Is this skill evidenced in career history or just listed?
+        # Skills verified in history get full weight; skills only in list get 40%
+        name_tokens = name.split()
+        evidenced_in_history = any(token in full_evidence_text for token in name_tokens if len(token) > 2)
+        evidence_mult = 1.0 if evidenced_in_history else 0.4
+        
+        skill_score = skill_tier_weight * prof_mult * (0.5 + 0.5 * dur_mult) * evidence_mult
+        score += skill_score
+        matches += 1
+        
     if matches == 0:
         return 0.0
         
     # Average matched skill quality scaled by number of matches (diminishing returns)
-    norm_score = min(1.0, (score / matches) * (0.6 + 0.4 * min(1.0, matches / 4.0)))
+    norm_score = min(1.0, (score / matches) * (0.6 + 0.4 * min(1.0, matches / 5.0)))
     return norm_score
 
 def score_candidate(

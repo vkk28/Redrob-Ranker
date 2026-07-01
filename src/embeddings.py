@@ -7,12 +7,14 @@ logger = get_logger("embeddings")
 
 _model = None
 
+EMBEDDING_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
+EMBEDDING_DIM = 384
+
 def get_embedding_model() -> SentenceTransformer:
     global _model
     if _model is None:
-        logger.info("Loading sentence-transformers BAAI/bge-large-en-v1.5 (CPU)...")
-        # Load local or remote model
-        _model = SentenceTransformer("BAAI/bge-large-en-v1.5", device="cpu")
+        logger.info(f"Loading sentence-transformers {EMBEDDING_MODEL_NAME} (CPU)...")
+        _model = SentenceTransformer(EMBEDDING_MODEL_NAME, device="cpu")
     return _model
 
 def get_candidate_text(candidate: Dict[str, Any]) -> str:
@@ -76,8 +78,9 @@ def get_candidate_text(candidate: Dict[str, Any]) -> str:
 
 def embed_text(text: Union[str, List[str]], is_query: bool = False) -> np.ndarray:
     """
-    Embed string or list of strings using the BGE model.
-    Prepend query instruction if is_query=True (required for BAAI/bge retrieval).
+    Embed string or list of strings using the sentence-transformers model.
+    The is_query flag is accepted for API compatibility but MiniLM does not
+    require a special query prefix (unlike BGE models).
     """
     model = get_embedding_model()
     
@@ -86,13 +89,9 @@ def embed_text(text: Union[str, List[str]], is_query: bool = False) -> np.ndarra
     else:
         texts = text
         
-    if is_query:
-        # BGE query instruction prefix
-        prefix = "Represent this sentence for searching relevant passages: "
-        texts = [prefix + t for t in texts]
-        
     embeddings = model.encode(texts, show_progress_bar=False, normalize_embeddings=True)
     
     if isinstance(text, str):
         return embeddings[0]
     return embeddings
+

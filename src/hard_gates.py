@@ -9,13 +9,16 @@ logger = get_logger("hard_gates")
 TARGET_TITLES = [
     "ai engineer", "ml engineer", "machine learning engineer", "nlp engineer", 
     "deep learning engineer", "search engineer", "recommendation engineer", 
-    "nlp research", "speech engineer", "computer vision engineer", "founding engineer"
+    "nlp research", "founding engineer", "applied scientist", "research engineer",
+    "ranking engineer", "retrieval engineer"
 ]
 
 ADJACENT_TITLES = [
     "backend engineer", "software engineer", "data engineer", "data scientist", 
     "full stack engineer", "fullstack engineer", "systems engineer", "tech lead", 
-    "technical lead", "engineering manager"
+    "technical lead", "engineering manager", "devops engineer", "sre", 
+    "site reliability", "platform engineer", "qa analyst", "qa engineer",
+    "computer vision", "speech engineer"
 ]
 
 MISMATCH_TITLES = [
@@ -24,6 +27,9 @@ MISMATCH_TITLES = [
     "mechanical engineer", "civil engineer", "electrical engineer", "chemical engineer",
     "manufacturing engineer", "industrial engineer", "quality engineer", "qa manager",
     "content writer", "copywriter", "graphic designer", "accountant",
+    "intern", "trainee", "associate consultant", "process associate",
+    "support engineer", "customer success", "technical writer", "procurement",
+    "supply chain", "logistics manager", "real estate", "pharmacy",
 ]
 
 def check_title_match(title: str) -> float:

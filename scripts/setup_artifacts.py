@@ -92,11 +92,9 @@ def main():
     logger.info("Saved candidate_embeddings.npy")
     print("[TRACE] Saved candidate embeddings to disk")
     
-    # 3. Create FAISS HNSW index
-    logger.info("Step 3: Creating FAISS HNSW Index...")
-    # Using HNSW index for fast retrieval
-    index = faiss.IndexHNSWFlat(embedding_dim, 32)
-    index.hnsw.efConstruction = 40
+    # 3. Create FAISS IndexFlatIP
+    logger.info("Step 3: Creating FAISS IndexFlatIP...")
+    index = faiss.IndexFlatIP(embedding_dim)
     index.add(all_embeddings)
     
     faiss.write_index(index, str(config.ARTIFACTS_DIR / "faiss_index.bin"))
