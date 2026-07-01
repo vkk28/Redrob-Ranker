@@ -104,9 +104,14 @@ def _extract_achievement(candidate: Dict[str, Any]) -> str:
                            "implemented", "architected", "developed", "launched",
                            "created", "optimized", "reduced", "increased", "improved"]
             ):
-                # Truncate if too long
+                # Truncate cleanly if too long
                 if len(s_clean) > 150:
-                    s_clean = s_clean[:147] + "..."
+                    truncated = s_clean[:147]
+                    last_space = truncated.rfind(' ')
+                    if last_space > 0:
+                        s_clean = truncated[:last_space] + "..."
+                    else:
+                        s_clean = truncated + "..."
                 if not s_clean.endswith("."):
                     s_clean += "."
                 return s_clean

@@ -20,7 +20,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Senior Applied Scientist at Meta
 - **Years of Experience**: 16.2 YOE
 - **Skills**: Fine-tuning LLMs, LlamaIndex, Qdrant, Reinforcement Learning, NLP, Statistical Modeling, Kubeflow, ASR, OpenSearch, Deep Learning, Machine Learning, LLMs, BM25, Weaviate, Python, TensorFlow, CI/CD, pgvector, Speech Recognition, Elasticsearch
-- **Generated Reasoning**: *"16y Senior Applied Scientist at Meta. Key achievement: Owned the end-to-end ranking pipeline at a recommendations-heavy consumer product: candidate sourcing → embedding generation (using a fine-tuned BG... Directly maps to: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval, search/ranking/retrieval systems."*
+- **Generated Reasoning**: *"16y Senior Applied Scientist at Meta. Key achievement: Owned the end-to-end ranking pipeline at a recommendations-heavy consumer product: candidate sourcing → embedding generation (using a fine-tuned... Directly maps to: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval, search/ranking/retrieval systems."*
 
 ### Career History:
 - **Senior Applied Scientist** at Meta (2023-05-13 to Present)
@@ -36,7 +36,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Senior NLP Engineer at Salesforce
 - **Years of Experience**: 8.9 YOE
 - **Skills**: Python, Image Classification, OpenCV, Pinecone, Haystack, Six Sigma, TTS, Diffusion Models, BM25, YOLO, OpenSearch, PEFT, Deep Learning, Elasticsearch, QLoRA, Semantic Search
-- **Generated Reasoning**: *"9y Senior NLP Engineer at Salesforce. Key achievement: Built the data curation pipeline that generated 200K high-quality preference pairs from recruiter labels, plus the eval harness using both ranking ... Directly maps to: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval, search/ranking/retrieval systems."*
+- **Generated Reasoning**: *"9y Senior NLP Engineer at Salesforce. Key achievement: Built the data curation pipeline that generated 200K high-quality preference pairs from recruiter labels, plus the eval harness using both ranking... Directly maps to: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval, search/ranking/retrieval systems."*
 
 ### Career History:
 - **Senior NLP Engineer** at Salesforce (2023-06-12 to Present)
@@ -114,7 +114,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Senior AI Engineer at Netflix
 - **Years of Experience**: 7.8 YOE
 - **Skills**: LoRA, Learning to Rank, Weaviate, PEFT, BM25, Pinecone, Machine Learning, Information Retrieval, Qdrant, Embeddings, CNN, RAG, MLOps, Forecasting, Sentence Transformers, Content Writing, Speech Recognition, Elasticsearch, Object Detection
-- **Generated Reasoning**: *"8y Senior AI Engineer at Netflix. Key achievement: Owned the end-to-end ranking pipeline at a recommendations-heavy consumer product: candidate sourcing → embedding generation (using a fine-tuned BG... Directly maps to: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval, search/ranking/retrieval systems."*
+- **Generated Reasoning**: *"8y Senior AI Engineer at Netflix. Key achievement: Owned the end-to-end ranking pipeline at a recommendations-heavy consumer product: candidate sourcing → embedding generation (using a fine-tuned... Directly maps to: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval, search/ranking/retrieval systems."*
 
 ### Career History:
 - **Senior AI Engineer** at Netflix (2022-04-18 to Present)
@@ -190,7 +190,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Senior NLP Engineer at Netflix
 - **Years of Experience**: 5.2 YOE
 - **Skills**: Statistical Modeling, MLOps, Snowflake, Prompt Engineering, Information Retrieval, Speech Recognition, Semantic Search, Deep Learning, Python, NLP, MLflow, LoRA, RAG, Kubeflow, pgvector, Haystack, Hugging Face Transformers, Embeddings
-- **Generated Reasoning**: *"Senior NLP Engineer at Netflix (5.2 YOE). Notable: Built the data curation pipeline that generated 200K high-quality preference pairs from recruiter labels, plus the eval harness using both ranking ... JD alignment: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
+- **Generated Reasoning**: *"Senior NLP Engineer at Netflix (5.2 YOE). Notable: Built the data curation pipeline that generated 200K high-quality preference pairs from recruiter labels, plus the eval harness using both ranking... JD alignment: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
 
 ### Career History:
 - **Senior NLP Engineer** at Netflix (2023-08-11 to Present)
@@ -204,7 +204,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Staff Machine Learning Engineer at Yellow.ai
 - **Years of Experience**: 8.6 YOE
 - **Skills**: Pinecone, QLoRA, LLMs, Hugging Face Transformers, RAG, SAP, TensorFlow, LoRA, Flask, Prompt Engineering, BM25, Elasticsearch, MLOps, pgvector, Learning to Rank, Deep Learning, Python, NLP, YOLO
-- **Generated Reasoning**: *"Staff Machine Learning Engineer at Yellow.ai (8.6 YOE). Notable: Owned the end-to-end ranking pipeline at a recommendations-heavy consumer product: candidate sourcing → embedding generation (using a fine-tuned BG... JD alignment: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
+- **Generated Reasoning**: *"Staff Machine Learning Engineer at Yellow.ai (8.6 YOE). Notable: Owned the end-to-end ranking pipeline at a recommendations-heavy consumer product: candidate sourcing → embedding generation (using a fine-tuned... JD alignment: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
 
 ### Career History:
 - **Staff Machine Learning Engineer** at Yellow.ai (2022-09-15 to Present)
@@ -254,7 +254,7 @@ Evaluate the following candidate profiles against the Job Description. Check for
 - **Current Role**: Senior NLP Engineer at Niramai
 - **Years of Experience**: 7.8 YOE
 - **Skills**: TensorFlow, OpenSearch, FAISS, PEFT, Feature Engineering, Embeddings, LangChain, MLOps, Weaviate, PyTorch, Image Classification, Semantic Search, LlamaIndex
-- **Generated Reasoning**: *"Senior NLP Engineer at Niramai (7.8 YOE). Notable: Owned the end-to-end ranking pipeline at a recommendations-heavy consumer product: candidate sourcing → embedding generation (using a fine-tuned BG... JD alignment: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
+- **Generated Reasoning**: *"Senior NLP Engineer at Niramai (7.8 YOE). Notable: Owned the end-to-end ranking pipeline at a recommendations-heavy consumer product: candidate sourcing → embedding generation (using a fine-tuned... JD alignment: vector database experience (FAISS/Milvus/Qdrant), embeddings and dense retrieval."*
 
 ### Career History:
 - **Senior NLP Engineer** at Niramai (2022-02-17 to Present)
