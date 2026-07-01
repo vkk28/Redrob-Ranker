@@ -106,11 +106,17 @@ def generate_local_narrative(candidate: Dict[str, Any], prod_score: float, eval_
     # Find which specific JD-relevant technologies candidate knows
     skills = [s.get("name", "").lower() for s in candidate.get("skills", [])]
     history_text = " ".join([r.get("description", "") for r in history]).lower()
+    summary_text = profile.get("summary", "").lower()
     
-    vector_dbs = [t for t in ["faiss", "milvus", "qdrant", "pinecone", "weaviate", "pgvector", "opensearch", "elasticsearch"]
-                  if t in " ".join(skills) or t in history_text]
-    eval_tools = [t for t in ["ndcg", "mrr", "map", "a/b test", "evaluation"]
-                  if t in " ".join(skills) or t in history_text]
+    vector_dbs_in_history = [t for t in ["faiss", "milvus", "qdrant", "pinecone", "weaviate", "pgvector", "opensearch", "elasticsearch"]
+                            if t in history_text or t in summary_text]
+    vector_dbs_in_skills = [t for t in ["faiss", "milvus", "qdrant", "pinecone", "weaviate", "pgvector", "opensearch", "elasticsearch"]
+                           if t in " ".join(skills) and t not in vector_dbs_in_history]
+                           
+    eval_tools_in_history = [t for t in ["ndcg", "mrr", "map", "a/b test", "evaluation"]
+                            if t in history_text or t in summary_text]
+    eval_tools_in_skills = [t for t in ["ndcg", "mrr", "map", "a/b test", "evaluation"]
+                           if t in " ".join(skills) and t not in eval_tools_in_history]
     
     # Build narrative from actual profile data
     if achievements:
@@ -128,10 +134,15 @@ def generate_local_narrative(candidate: Dict[str, Any], prod_score: float, eval_
         narrative = f"{title} at {company} with {yoe} YOE. Handled systems involving {skills_str}."
     
     # Add specific JD-technology connections (not generic praise)
-    if vector_dbs:
-        narrative += f" Has hands-on experience with {', '.join(vector_dbs[:2]).upper()}."
-    if eval_tools:
-        narrative += f" Familiar with {', '.join(eval_tools[:2])} evaluation."
+    if vector_dbs_in_history:
+        narrative += f" Shipped systems using {', '.join(vector_dbs_in_history[:2]).upper()}."
+    elif vector_dbs_in_skills:
+        narrative += f" Lists skills: {', '.join(vector_dbs_in_skills[:2]).upper()}."
+        
+    if eval_tools_in_history:
+        narrative += f" Experience with {', '.join(eval_tools_in_history[:2])} evaluation."
+    elif eval_tools_in_skills:
+        narrative += f" Lists evaluation skills: {', '.join(eval_tools_in_skills[:2])}."
     
     return narrative
 

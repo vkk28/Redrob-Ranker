@@ -33,77 +33,94 @@ def main():
     
     current_ids = set(filtered_df["candidate_id"].tolist())
     needed = 100 - len(filtered_df)
-    print(f"Need to find {needed} replacement candidates.")
-
-    # 2. Scan candidates.jsonl for high-quality replacements
-    replacements = []
     
-    # We want strong Search/NLP/ML profiles that pass all gates
+    # 2. Scan candidates.jsonl for replacements if needed
+    replacements = []
     search_keywords = {"faiss", "milvus", "qdrant", "pinecone", "weaviate", "elasticsearch", "opensearch", "rag", "retrieval", "embeddings"}
     
-    print("Scanning candidates.jsonl for replacement candidates...")
+    if needed > 0:
+        print(f"Need to find {needed} replacement candidates. Scanning candidates.jsonl...")
+        with open(CANDIDATES_JSONL, "r", encoding="utf-8") as f:
+            for line in f:
+                if len(replacements) >= needed:
+                    break
+                if not line.strip():
+                    continue
+                cand = json.loads(line)
+                cid = cand["candidate_id"]
+                
+                # Skip if already in top 100
+                if cid in current_ids or cid in TO_REMOVE:
+                    continue
+                    
+                # Apply hard gates
+                if is_honeypot(cand) or is_consulting_only(cand):
+                    continue
+                    
+                profile = cand.get("profile", {})
+                yoe = profile.get("years_of_experience", 0)
+                if yoe < 3.0:
+                    continue
+                    
+                # Filter for ML/Search relevance
+                skills = {s.get("name", "").lower() for s in cand.get("skills", [])}
+                if not (skills & search_keywords):
+                    continue
+                    
+                title = profile.get("current_title", "").lower()
+                if not any(t in title for t in ["engineer", "scientist", "analyst"]):
+                    continue
+                    
+                replacements.append({
+                    "candidate_id": cid,
+                    "score": 0.25, # placeholder, will be sorted/calibrated later
+                    "reasoning": ""
+                })
+        
+        new_rows = pd.DataFrame(replacements)
+        final_df = pd.concat([filtered_df, new_rows], ignore_index=True)
+    else:
+        final_df = filtered_df.copy()
+
+    # 3. Stream candidates.jsonl to rebuild reasoning for ALL 100 final candidates
+    final_ids = set(final_df["candidate_id"].tolist())
+    candidate_profiles = {}
+    
+    print("Loading candidate profiles from candidates.jsonl to regenerate narratives...")
     with open(CANDIDATES_JSONL, "r", encoding="utf-8") as f:
         for line in f:
-            if len(replacements) >= needed:
-                break
             if not line.strip():
                 continue
             cand = json.loads(line)
             cid = cand["candidate_id"]
+            if cid in final_ids:
+                candidate_profiles[cid] = cand
+
+    print("Regenerating narratives for all 100 candidates...")
+    for idx, row in final_df.iterrows():
+        cid = row["candidate_id"]
+        cand = candidate_profiles.get(cid)
+        if cand:
+            feats = local_extract_features(cand)
+            final_df.at[idx, "reasoning"] = feats["fit_narrative"]
             
-            # Skip if already in top 100
-            if cid in current_ids or cid in TO_REMOVE:
-                continue
-                
-            # Apply hard gates
-            if is_honeypot(cand) or is_consulting_only(cand):
-                continue
-                
+            # Make sure score is scaled reasonably
             profile = cand.get("profile", {})
             yoe = profile.get("years_of_experience", 0)
-            if yoe < 3.0:
-                continue
-                
-            # Filter for ML/Search relevance
             skills = {s.get("name", "").lower() for s in cand.get("skills", [])}
-            if not (skills & search_keywords):
-                continue
-                
-            title = profile.get("current_title", "").lower()
-            if not any(t in title for t in ["engineer", "scientist", "analyst"]):
-                continue
-                
-            # Candidate is valid! Extract features and generate reasoning
-            feats = local_extract_features(cand)
-            reasoning = feats["fit_narrative"]
-            
-            # Estimate a reasonable score in the lower cohort range (e.g., 0.25 to 0.30)
-            score = round(0.25 + (yoe % 5) * 0.01 + (len(skills & search_keywords) * 0.005), 4)
-            
-            replacements.append({
-                "candidate_id": cid,
-                "score": score,
-                "reasoning": reasoning
-            })
-            print(f"Selected replacement: {cid} | Score: {score} | {profile.get('current_title')} with {yoe} YOE")
+            # Adjust score if it is a new replacement (older ones keep their score)
+            if cid in [r["candidate_id"] for r in replacements]:
+                final_df.at[idx, "score"] = round(0.25 + (yoe % 5) * 0.01 + (len(skills & search_keywords) * 0.005), 4)
 
-    # 3. Combine and re-sort
-    new_rows = pd.DataFrame(replacements)
-    final_df = pd.concat([filtered_df, new_rows], ignore_index=True)
-    
-    # Sort by score descending, then candidate_id ascending for deterministic sorting
+    # 4. Sort and format
     final_df = final_df.sort_values(by=["score", "candidate_id"], ascending=[False, True]).reset_index(drop=True)
-    
-    # Re-assign ranks 1 to 100
     final_df["rank"] = final_df.index + 1
-    
-    # Ensure correct column order
     final_df = final_df[["candidate_id", "rank", "score", "reasoning"]]
     
-    # 4. Save CSV and XLSX
+    # 5. Save CSV and XLSX
     final_df.to_csv(SUBMISSION_CSV, index=False)
     final_df.to_excel("submission.xlsx", index=False)
-    print("Successfully patched submission.csv and regenerated submission.xlsx!")
+    print("Successfully updated reasoning narratives, saved submission.csv and regenerated submission.xlsx!")
 
 if __name__ == "__main__":
     main()
