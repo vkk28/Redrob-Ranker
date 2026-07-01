@@ -2,7 +2,7 @@
 
 This repository implements a 2-Phase Retrieve-and-Rerank candidate discovery and ranking system to match 100,000 candidate profiles against a Senior AI Engineer hiring requirement.
 
-The ranking pipeline is optimized for CPU-only execution and completes in under **30 seconds** on the full 100K pool using **under 2 GB RAM**, satisfying all computational constraints (Budget: ≤ 5 min wall-clock, ≤ 16 GB RAM).
+The ranking pipeline is optimized for CPU-only execution and completes in under **20 seconds** on the full 100K pool using **under 2 GB RAM**, satisfying all computational constraints (Budget: ≤ 5 min wall-clock, ≤ 16 GB RAM).
 
 ## 🚀 Setup & Execution
 
@@ -41,20 +41,43 @@ OMP_NUM_THREADS=1 PYTHONPATH=. pytest
 
 ---
 
+## 🐳 Docker Sandbox
+
+Build and run the ranking pipeline in a sandboxed Docker container:
+
+```bash
+# Build the image (includes all pre-computed artifacts)
+docker build -t redrob-ranker .
+
+# Run ranking on your candidates file
+docker run -v /path/to/candidates.jsonl:/app/candidates.jsonl redrob-ranker
+
+# Run with custom output path
+docker run \
+  -v /path/to/candidates.jsonl:/app/candidates.jsonl \
+  -v /path/to/output:/app/output \
+  redrob-ranker --candidates ./candidates.jsonl --out ./output/submission.csv
+```
+
+The Docker image is ~1.5 GB (includes PyTorch CPU, cross-encoder model, and FAISS index). No network access is required at runtime.
+
+---
+
 ## 🏗️ Repository Architecture
 
 - `src/config.py`: Core configurations, weights, thresholds, and path definitions.
 - `src/schema.py`: Pydantic validation schemas matching `candidate_schema.json`.
-- `src/data_loader.py`: High-speed generator-based streaming ingestion.
-- `src/jd_parser.py`: Extracts requirements, preferred locations, and disqualifiers.
+- `src/data_loader.py`: High-speed generator-based streaming ingestion (supports JSONL, gzip, and JSON array formats).
+- `src/jd_parser.py`: Extracts requirements, preferred locations, and disqualifiers from the JD.
 - `src/embeddings.py`: Profile concatenation recipes and BGE query/passage embeddings.
 - `src/skill_ontology.py`: Cosine-similarity agglomerative skill clustering.
-- `src/honeypot_detection.py`: Impossible dates, duration-proficiency clashes, and date sequencing rules to catch traps.
-- `src/hard_gates.py`: In-office proximity, TITLES, and consulting-only (WITCH-tier) gates.
+- `src/honeypot_detection.py`: Fictional company detection, impossible dates, duration-proficiency clashes, and date sequencing rules.
+- `src/hard_gates.py`: Title mismatch (incl. mechanical/civil engineers), and consulting-only (WITCH-tier) gates.
 - `src/scoring.py`: Combines core fit, logistics, education, and behavioral multipliers.
+- `src/narrative_generation.py`: Rank-aware, candidate-specific reasoning generation with varied vocabulary.
 - `src/cross_encoder_rerank.py`: Local cross-encoder model scoring.
 - `src/tier5_finder.py`: Discovers hidden-gem recommendation/search developers.
-- `src/assembly.py`: Overlap deduplication and score monotonicity reconciliation.
+- `src/assembly.py`: Overlap deduplication, score monotonicity reconciliation, and tie-break sorting.
 
 ---
 
@@ -62,8 +85,9 @@ OMP_NUM_THREADS=1 PYTHONPATH=. pytest
 
 Our solution implements an advanced retrieve-and-rerank model:
 1. **Semantic Retrieval**: Top 4,000 candidates are retrieved from a HNSW index using `BAAI/bge-large-en-v1.5`.
-2. **Hard & Soft Gates**: Strict heuristics filter out honeypot profiles, candidates from WITCH consulting firms, and non-engineering titles.
-3. **Core Scorer**: Computes a base match using Core ML/Search Fit (70%), Logistics (20%), and Education (10%).
+2. **Hard & Soft Gates**: Strict heuristics filter out honeypot profiles (including fictional companies), candidates from WITCH consulting firms, and non-engineering titles.
+3. **Core Scorer**: Computes a base match using Core ML/Search Fit (55%), Logistics (25%), and Education (20%) — calibrated from `calibration_weights.json`.
 4. **Behavioral Multiplier**: Stated responsiveness, last active dates, and open-to-work flags modify scores with a 0.60–1.0 multiplier.
 5. **Cross-Encoder Rerank**: The top 200 candidates are reranked via a locally cached `cross-encoder/ms-marco-MiniLM-L-6-v2`.
-6. **Tier-5 Force-Includes**: Scans the dataset to identify developers with deep recommendation/search experience but zero buzzwords, force-including them at the end of the top-100 with reconciled non-increasing scores.
+6. **Tier-5 Force-Includes**: Scans the scored pool for developers with deep recommendation/search experience but zero buzzwords, force-including them at the end of the top-100 with reconciled non-increasing scores.
+7. **Narrative Generation**: Rank-aware, candidate-specific reasoning — top candidates get enthusiastic tones with specific JD connections; lower-ranked candidates get honest gap analysis.

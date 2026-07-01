@@ -3,12 +3,12 @@ team_name: "Redrob-Rankers"
 
 primary_contact:
   name: "Varun Kashyap"
-  email: "varun@example.com"
-  phone: "+91-9999999999"
+  email: "varun@example.com"  # TODO: Replace with your real email before submission
+  phone: "+91-9999999999"  # TODO: Replace with your real phone before submission
 
 team_members:
   - name: "Varun Kashyap"
-    email: "varun@example.com"
+    email: "varun@example.com"  # TODO: Replace with your real email before submission
     role: "ML Engineer"
 
 github_repo: "https://github.com/vkk28/Redrob-Ranker"
@@ -35,7 +35,7 @@ ai_usage_summary: |
   Used Gemini 3.5 Flash for code generation and review. No candidate data was sent to any LLM APIs during Phase 2 ranking.
 
 methodology_summary: |
-  2-Phase Retrieve-and-Rerank architecture. Retrieves top 4,000 candidates using dense BGE embeddings (HNSW index). Applies hard gates to filter honeypots, WITCH consulting, and title mismatch. Combines Core Fit (production system experience), Logistics, Education, and behavioral multipliers. Reranks top 200 via cached local Cross-Encoder. Deduplicates and force-includes Tier-5 candidates in final 100 with monotonic score reconciliation. Complete CPU run takes under 30s.
+  2-Phase Retrieve-and-Rerank architecture. Retrieves top 4,000 candidates using dense BGE embeddings (HNSW index). Applies hard gates to filter honeypots (including fictional company detection), WITCH consulting, and title mismatch. Combines Core Fit 55%, Logistics 25%, Education 20% (calibrated weights) with behavioral multipliers. Reranks top 200 via cached local Cross-Encoder. Force-includes Tier-5 hidden-gem candidates. Generates rank-aware, candidate-specific reasoning with varied vocabulary. Complete CPU run takes under 20s.
 
 declarations:
   read_submission_spec: true
