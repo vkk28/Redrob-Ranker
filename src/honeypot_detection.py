@@ -28,16 +28,7 @@ def is_honeypot(candidate: Dict[str, Any], current_year: int = 2026) -> bool:
     education = candidate.get("education", [])
     signals = candidate.get("redrob_signals", {})
 
-    # 0. Check for fictional/impossible company names (fast-path rejection)
-    current_company = (profile.get("current_company") or "").lower().strip()
-    if current_company in FICTIONAL_COMPANIES:
-        logger.debug(f"Honeypot: Fictional company '{current_company}' in current_company")
-        return True
-    for role in history:
-        company = (role.get("company") or "").lower().strip()
-        if company in FICTIONAL_COMPANIES:
-            logger.debug(f"Honeypot: Fictional company '{company}' in career history")
-            return True
+    # Fictional company check disabled: synthetic profiles use fictional names as standard companies.
 
     # 1. Check for basic date order consistency in career history
     for role in history:
@@ -156,32 +147,8 @@ def is_honeypot(candidate: Dict[str, Any], current_year: int = 2026) -> bool:
                             logger.debug(f"Honeypot: Overlapping concurrent full-time roles: '{r1.get('title')}' at {r1.get('company')} and '{r2.get('title')}' at {r2.get('company')} overlapping by {overlap_months:.1f} months")
                             return True
 
-    # 5. Check for education years that are completely out of line with career history
-    # E.g. starting working full-time roles before graduating.
-    # We should only check degrees that are full-time (B.E., B.Tech, M.S., Ph.D.) and not online/distance.
-    for edu in education:
-        end_yr = edu.get("end_year")
-        if end_yr and history:
-            # Earliest full-time career start
-            earliest_ft_start = None
-            for role in history:
-                title = role.get("title", "").lower()
-                desc = role.get("description", "").lower()
-                if "intern" in title or "intern" in desc:
-                    continue
-                start_dt = parse_date(role.get("start_date"))
-                if start_dt:
-                    if earliest_ft_start is None or start_dt < earliest_ft_start:
-                        earliest_ft_start = start_dt
-            
-            if earliest_ft_start:
-                # If they started full-time work more than 2 years before graduating from their primary degree
-                # (e.g. bachelor's or master's)
-                degree = edu.get("degree", "").lower()
-                is_major_degree = any(d in degree for d in ["b.", "m.", "ph.d", "bachelor", "master", "doctor"])
-                if is_major_degree and earliest_ft_start.year < (end_yr - 2):
-                    logger.debug(f"Honeypot: Started working full-time in {earliest_ft_start.year} but graduated {edu.get('degree')} in {end_yr}")
-                    return True
+    # Education career mismatch check disabled: graduation years and career history start years
+    # are not strictly aligned for a large portion of legitimate candidates in the synthetic dataset.
 
     # 6. Endorsements received is disproportionate to connection count
     conn_count = signals.get("connection_count", 0)

@@ -17,6 +17,7 @@ RUNTIME_FILES = [
     Path("src/tier5_finder.py"),
     Path("src/assembly.py"),
     Path("src/utils.py"),
+    Path("src/llm_feature_extraction.py"),
 ]
 
 BANNED_IMPORTS = {"requests", "httpx", "urllib", "openai", "anthropic", "google"}
