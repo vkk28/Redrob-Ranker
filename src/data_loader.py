@@ -37,6 +37,8 @@ def stream_candidates(
             with open(path, "r", encoding="utf-8") as f:
                 candidates_list = json.load(f)
             for line_num, candidate_dict in enumerate(candidates_list, 1):
+                if "candidate_id" in candidate_dict:
+                    candidate_dict["candidate_id"] = str(candidate_dict["candidate_id"])
                 if validate:
                     try:
                         validated_cand = Candidate(**candidate_dict)
@@ -74,6 +76,8 @@ def stream_candidates(
                 content = f.read()
                 candidates_list = json.loads(content)
                 for line_num, candidate_dict in enumerate(candidates_list, 1):
+                    if "candidate_id" in candidate_dict:
+                        candidate_dict["candidate_id"] = str(candidate_dict["candidate_id"])
                     if validate:
                         try:
                             validated_cand = Candidate(**candidate_dict)
@@ -94,6 +98,8 @@ def stream_candidates(
                 continue
             try:
                 candidate_dict = json.loads(line)
+                if "candidate_id" in candidate_dict:
+                    candidate_dict["candidate_id"] = str(candidate_dict["candidate_id"])
                 if validate:
                     try:
                         # Validate using Pydantic model

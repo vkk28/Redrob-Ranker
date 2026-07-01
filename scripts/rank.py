@@ -59,27 +59,31 @@ def main():
                     feat = json.loads(line)
                     llm_features_dict[feat["candidate_id"]] = feat
     
-    # 2. Ingest and Stream candidates to locate them by ID
-    logger.info("Streaming and indexing candidates pool by ID...")
-    candidates_dict = {}
-    all_candidates_list = []
-    
-    for cand in stream_candidates(args.candidates, validate=False):
-        candidates_dict[cand["candidate_id"]] = cand
-        all_candidates_list.append(cand)
-
-    logger.info(f"Loaded {len(candidates_dict)} candidates from input file.")
-
-    # 3. Retrieve Top Candidates via FAISS
-    logger.info("Step 3: Retrieving candidates using HNSW index...")
-    top_n = min(len(candidates_dict), config.REDUCED_POOL_SIZE)
+    # 2. Retrieve Top Candidates via FAISS
+    logger.info("Step 2: Retrieving candidates using HNSW index...")
+    top_n = min(len(id_map), config.REDUCED_POOL_SIZE)
     distances, indices = index.search(jd_embedding.reshape(1, -1), top_n)
     
-    retrieved_cands = []
+    retrieved_ids = set()
     for idx in indices[0]:
         cand_id = id_map.get(idx)
-        if cand_id and cand_id in candidates_dict:
-            retrieved_cands.append(candidates_dict[cand_id])
+        if cand_id:
+            retrieved_ids.add(cand_id)
+            
+    # 3. Stream and load only the retrieved candidates from input file
+    logger.info("Step 3: Streaming and parsing retrieved candidates pool...")
+    retrieved_cands_dict = {}
+    for cand in stream_candidates(args.candidates, validate=False):
+        cid = cand["candidate_id"]
+        if cid in retrieved_ids:
+            retrieved_cands_dict[cid] = cand
+            
+    retrieved_cands = []
+    # Preserve FAISS ranking order in retrieved_cands list
+    for idx in indices[0]:
+        cand_id = id_map.get(idx)
+        if cand_id and cand_id in retrieved_cands_dict:
+            retrieved_cands.append(retrieved_cands_dict[cand_id])
             
     logger.info(f"Retrieved {len(retrieved_cands)} candidates from FAISS index.")
 
