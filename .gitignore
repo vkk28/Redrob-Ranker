@@ -29,6 +29,7 @@ candidates.jsonl.gz
 artifacts/candidate_embeddings.npy
 artifacts/faiss_index.bin
 artifacts/cross_encoder_model/
+artifacts/retrieved_indices.json
 
 # Temporary files
 *.log
